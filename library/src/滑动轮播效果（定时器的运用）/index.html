@@ -1,0 +1,123 @@
+<!doctype html><!--声明文档类型-->
+<html lang="en">
+	<head>
+		<!--声明当前页面编码集；charset=gbk,gbk2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Document</title>
+		<meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+		<meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+		<style>
+		*{margin: 0;padding: 0;}
+		ul li{list-style: none;}
+		a{ text-decoration:none;}
+		.clearfix:after{
+			content:"";
+			clear: both;
+			display: block;
+		}
+		.fl-l{
+			float: left;
+		}
+		.con{
+			width: 738px;
+			height: 430px;
+			margin: 30px auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.con .img img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 738px;
+		}
+		.con .img img.first{
+			left: 0;
+		}
+		.con .tab{
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			height: 30px;
+			/* border: 2px solid red; */
+			text-align: center;
+			line-height: 30px;
+		}
+		.con .tab a{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #cc99ff;
+		}
+		.con .tab a.active{
+			background: #666699;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="con">
+			<div class="img">
+				<img class="first" src="img/1.jpg" alt="" />
+				<img src="img/2.jpg" alt="" />
+				<img src="img/3.jpg" alt="" />
+				<img src="img/4.jpg" alt="" />
+				<img src="img/5.jpg" alt="" />
+			</div>
+			<div class="tab">
+				<a class="active" href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	<script type="text/javascript">
+		var aImg = document.getElementsByClassName("con")[0].getElementsByClassName("img")[0].getElementsByTagName("img");
+		var aA = document.getElementsByClassName("con")[0].getElementsByClassName("tab")[0].getElementsByTagName("a");
+		var oldaA = aA[0];
+		var n=0;
+		var clickTime = 0;
+		for(var i=0;i<aA.length;i++){
+			aA[i].i=i;
+			aA[i].onclick = function change(){
+				if(new Date() - clickTime>= 1000){
+					clickTime = new Date();
+					if(this.i!=n){
+					oldaA.className="";
+					this.className="active";
+					oldaA = this;
+					
+					last = n;
+					
+					var left1 = 0;
+					var timer1 = setInterval(function(){
+						left1 -=10;
+						if( left1 <= -738){
+							left1 = -738;
+							clearInterval(timer1);
+						}
+						aImg[last].style.left = left1 + "px";
+					},13);
+					
+					n=this.i;
+					var left2 = 738;
+					var timer2 = setInterval(function(){
+						left2 -=10;
+						if( left2 <= 0){
+							left2 = 0;
+								clearInterval(timer2);
+							}
+							aImg[n].style.left = left2 + "px";
+						},13);
+					}
+				}
+				
+			}
+		}
+	</script>
+	
+	</body>
+</html>

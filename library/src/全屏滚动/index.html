@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="东东"/>
+    <meta name="description" content=""/>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none;}
+        li{list-style: none;}
+        html,body{
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            overflow: hidden;
+        }
+        a img{
+            display: block;
+        }
+        #con{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #con div.a{
+            width: 100%;
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+        }
+        #con div.img1{
+            background-image: url("img/1.jpg");
+        }
+        #con div.img2{
+            background-image: url("img/2.jpg");
+        }
+        #con div.img3{
+            background-image: url("img/3.jpg");
+        }
+        #con div.img4{
+            background-image: url("img/4.jpg");
+        }
+        #con div.img5{
+            background-image: url("img/5.jpg");
+        }
+    </style>
+</head>
+<body>
+<div id="con">
+    <div class="img1 a"></div>
+    <div class="img2 a"></div>
+    <div class="img3 a"></div>
+    <div class="img4 a"></div>
+    <div class="img5 a"></div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script>
+var $con = $("#con"),
+    length = $con.children().length,
+    index = 0,
+    winH = $(window).height(),
+    lastTime=null;
+$(document).mousewheel(function (e,d) {
+    if ( new Date - lastTime > 800 ){
+        if ( d<0 ){
+            index ++;
+            index %= length;
+        }else{
+            index --;
+            if(index<0)index=length-1;
+        }
+        $con.stop().animate({
+            top: -index*winH
+        },800);
+        lastTime = new Date;
+    }
+});
+$(window).resize(function () {
+    winH = $(this).height();
+    $con.css("top" , -index*winH+'px');
+});
+
+</script>
+</body>
+</html>

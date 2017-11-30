@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Document</title>
+    <meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+    <meta name="Author" content="Name">
+    <meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        body {
+            background: url("img/bg.jpg")no-repeat center top;
+        }
+        #box {
+            width: 1100px;
+            height: 430px;
+            overflow: hidden;
+            margin: 180px auto;
+        }
+        #box ul {
+            display: block;
+            content: "";
+            clear: both;
+            width: 1000%;
+            height: 100%;
+        }
+        #box ul li {
+            float: left;
+            width: 100px;
+            height: 100%;
+        }
+        #box ul li:nth-child(1) {
+            background: url("img/1.jpg")no-repeat;
+            width: 790px;
+        }
+        #box ul li:nth-child(2) {
+            background: url("img/2.jpg")no-repeat;
+        }
+        #box ul li:nth-child(3) {
+            background: url("img/3.jpg")no-repeat;
+        }
+        #box ul li:nth-child(4) {
+            background: url("img/4.jpg")no-repeat;
+        }
+        #box ul li p {
+            width: 18px;
+            height: 400px;
+            padding: 30px 41px 0;
+            color: #fff;
+            font-size: 18px;
+            background: rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>
+            <p>我的个人拉萨之旅丨丨故事之城</p>
+        </li>
+        <li>
+            <p>我的个人拉萨之旅丨丨故事之城</p>
+        </li>
+        <li>
+            <p>我的个人拉萨之旅丨丨故事之城</p>
+        </li>
+        <li>
+            <p>我的个人拉萨之旅丨丨故事之城</p>
+        </li>
+    </ul>
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var $li = $("#box ul li");
+    $li.click(function () {
+        $(this).stop().animate({width: '790px'}).siblings().stop().animate({width: '100px'});
+    })
+</script>
+</body>
+</html>

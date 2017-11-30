@@ -1,0 +1,117 @@
+<!doctype html><!--声明文档类型-->
+<html lang="en">
+	<head>
+		<!--声明当前页面编码集；charset=gbk,gbk2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Document</title>
+		<meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+		<meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+
+		<style>
+		* {
+			margin:0;
+			padding:0;
+		}
+		img.title {
+			display:block;
+			margin:100px auto 0px;
+			width:280px;
+			height:130px;
+		}
+		#text {
+			width:500px;
+			height:35px;
+			text-indent:10px;
+			float:left;
+			margin:0 auto;
+			font-size:18px;
+		}
+		.btn {
+			cursor: pointer;
+			width: 102px;
+			height: 38px;
+			line-height: 38px;
+			background: #0033ff;
+			font-size: 16px;
+			color: white;
+			font-weight: normal; 
+			float:left;
+			text-align:center;
+		}
+		.btn:hover{
+			background:#3300cc;
+		}
+		.show {
+			width:606px;
+			height:35px;
+			margin:20px auto;
+			position:relative;
+		}
+		.search {
+			width:502px;
+			border:1px solid #dddddd;
+			display:none;
+			position:absolute;
+			top:37px;
+		}
+		.search ul li a{
+			text-decoration:none;
+			display:block;
+			color:#000000;
+		}
+		.search ul li a:hover {
+			background:#dddddd;
+		}
+		.search ul li{
+			width:502px;
+			height:30px;
+			text-indent:10px;
+			line-height:30px;
+			list-style:none;
+		}
+		</style>
+	</head>
+	<body>
+		<img src="images/1.png" alt="" class="title"/>
+		<div class="show">
+			<input type="text" id="text"/>
+			<div type="button" onclick="find()" class="btn"/>百度一下</div>
+			<div class="search">
+				<ul>
+				
+				</ul>
+			</div>
+		</div>
+		<script>
+		var oText = document.getElementById("text");
+		var oSea = document.querySelector(".search");
+		var oUl = document.querySelector("ul");
+		
+		function find(){
+			window.location.href="https://www.baidu.com/s?wd="+oText.value+"";
+		}
+		oText.onkeyup = function(e){
+			if(e && e.keyCode==13){
+				window.location.href="https://www.baidu.com/s?wd="+oText.value+"";
+			}
+			var os = document.createElement("script");
+			oSea.style.display = oText.value?"block":"none";
+			os.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+oText.value+"&cb=cdd"
+			document.body.appendChild(os);
+			os.onload = function(){
+				document.body.removeChild(this);
+			}
+		}
+		function cdd(json){
+			oUl.innerHTML = "";
+			json.s.forEach(function(el){
+				var oLi = document.createElement("li");
+				oLi.innerHTML = "<a href= 'https://www.baidu.com/s?wd="+el+"'>"+el+"</a>";
+				oUl.appendChild(oLi);
+			})
+		}
+
+		</script>
+	</body>
+</html>

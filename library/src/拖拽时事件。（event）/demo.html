@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双键小球</title>
+    <meta name="keywords" content="东东"/>
+    <meta name="description" content=""/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #000;
+            cursor: move;
+            user-select: none;
+            z-index: 90;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    var oBox = document.getElementsByClassName("box")[0],
+        //var oBox2 = document.getElementsByClassName("box2")[0],
+        maxW = document.documentElement.clientWidth,
+        maxH = document.documentElement.clientHeight,
+        width = oBox.clientWidth;
+    window.onresize = function(){
+        maxW = document.documentElement.clientWidth;
+        maxH = document.documentElement.clientHeight;
+    };
+    oBox.onmousedown = function(e){
+
+        e = e || window.event;
+        var sL = e.clientX;
+        var sT = e.clientY;
+        var oW = this.offsetLeft;
+        var oH = this.offsetTop;
+        //console.log(oW);
+        document.onmousemove = function (e) {
+            e = e || window.event;
+            var eL = e.clientX;
+            var eT = e.clientY;
+
+            var x_ = eL -sL;
+            var y_ = eT -sT;
+            //console.log(x_, y_);
+            var left =  x_ + oW;
+            var top = y_ + oH;
+
+            oBox.style.left =left + 'px';
+            oBox.style.top = top + 'px';
+        }
+    };
+    oBox.onmouseup = function () {
+        document.onmousemove = null;
+    };
+    var speed = 2,
+        timer = [];
+    document.onkeydown = function (e) {
+        e = e || window.event;
+        var oW = oBox.offsetLeft;
+        var oH = oBox.offsetTop;
+        if(e.keyCode === 37){
+
+            timer[e.keyCode] =timer[e.keyCode]|| setInterval(function () {
+                oW -= speed;
+                if(oW<=0){
+                    oW = 0;
+                }
+                oBox.style.left = oW +"px";
+                //console.log('左');
+            },20);
+        }
+        if(e.keyCode === 38){
+                timer[e.keyCode] = timer[e.keyCode]||setInterval(function () {
+                    oH -= speed;
+                    if(oH<=0){
+                        oH = 0;
+                    }
+                    oBox.style.top = oH +"px";
+
+                    //console.log('上');
+                },20);
+        }
+        if(e.keyCode === 39){
+                timer[e.keyCode] = timer[e.keyCode]||setInterval(function () {
+                    oW += speed;
+                    if(oW>= maxW-width){
+                        oW = maxW-width;
+                    }
+                    oBox.style.left = oW +"px";
+                    //console.log('右');
+                },20);
+        }
+        if(e.keyCode === 40){
+                timer[e.keyCode] = timer[e.keyCode]||setInterval(function () {
+                    oH += speed;
+                    if(oH>=maxH-width){
+                        oH = maxH-width;
+                    }
+                    oBox.style.top = oH +"px";
+                    //console.log('下');
+                },20);
+        }
+    };
+    document.onkeyup = function (e) {
+        e = e || window.event;
+        //console.log(0);
+        var key = e.keyCode;
+        clearInterval(timer[key]);
+        timer[key]=undefined;
+    }
+</script>
+</body>
+</html>

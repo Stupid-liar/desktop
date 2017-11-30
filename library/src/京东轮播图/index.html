@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="东东"/>
+    <meta name="description" content=""/>
+    <style>
+        li{list-style: none;}
+        a{text-decoration: none;}
+        #banner{
+            position: relative;
+            width: 790px;
+            height: 340px;
+            margin: 100px auto;
+        }
+        #banner ul{
+            position: relative;
+            width: 790px;
+            height: 340px;
+        }
+        #banner ul li{
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #banner .tab{
+            position: absolute;
+            left: calc(50% - 80px);
+            bottom: 30px;
+            width: 160px;
+            height: 20px;
+            border-radius: 10px;
+            background: rgba(0,0,0,.6);
+        }
+        #banner .tab span{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+            border-radius: 50%;
+            background: #fff;
+            margin: 3px;
+        }
+        #banner .btn div{
+            display: none;
+            position: absolute;
+            top: calc(50% - 40px);
+            width: 40px;
+            height: 80px;
+            background: rgba(0,0,0,.3);
+            color: #fff;
+            line-height: 80px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #banner:hover .btn div{
+            display: block;
+        }
+        #banner .btn div:hover{
+            background: rgba(0,0,0,.8);
+        }
+        #banner .btn div.left{
+             left: 0;
+        }
+        #banner .btn div.right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="banner">
+    <ul>
+        <li style="display: block"><a href=""><img src="img/1.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/2.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/3.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/4.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/5.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/6.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/7.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/8.jpg" alt=""></a></li>
+    </ul>
+    <div class="tab">
+        <span style="background: #911"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="btn">
+        <div class="left"> < </div>
+        <div class="right"> > </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var Tween = {
+            linear: function (t, b, c, d){  //匀速
+                return c*t/d + b;
+            },
+            easeIn: function(t, b, c, d){  //加速曲线
+                return c*(t/=d)*t + b;
+            },
+            easeOut: function(t, b, c, d){  //减速曲线
+                return -c *(t/=d)*(t-2) + b;
+            },
+            easeBoth: function(t, b, c, d){  //加速减速曲线
+                if ((t/=d/2) < 1) {
+                    return c/2*t*t + b;
+                }
+                return -c/2 * ((--t)*(t-2) - 1) + b;
+            },
+            easeInStrong: function(t, b, c, d){  //加加速曲线
+                return c*(t/=d)*t*t*t + b;
+            },
+            easeOutStrong: function(t, b, c, d){  //减减速曲线
+                return -c * ((t=t/d-1)*t*t*t - 1) + b;
+            },
+            easeBothStrong: function(t, b, c, d){  //加加速减减速曲线
+                if ((t/=d/2) < 1) {
+                    return c/2*t*t*t*t + b;
+                }
+                return -c/2 * ((t-=2)*t*t*t - 2) + b;
+            },
+            elasticIn: function(t, b, c, d, a, p){  //正弦衰减曲线（弹动渐入）
+                if (t === 0) {
+                    return b;
+                }
+                if ( (t /= d) == 1 ) {
+                    return b+c;
+                }
+                if (!p) {
+                    p=d*0.3;
+                }
+                if (!a || a < Math.abs(c)) {
+                    a = c;
+                    var s = p/4;
+                } else {
+                    var s = p/(2*Math.PI) * Math.asin (c/a);
+                }
+                return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+            },
+            elasticOut: function(t, b, c, d, a, p){    //正弦增强曲线（弹动渐出）
+                if (t === 0) {
+                    return b;
+                }
+                if ( (t /= d) == 1 ) {
+                    return b+c;
+                }
+                if (!p) {
+                    p=d*0.3;
+                }
+                if (!a || a < Math.abs(c)) {
+                    a = c;
+                    var s = p / 4;
+                } else {
+                    var s = p/(2*Math.PI) * Math.asin (c/a);
+                }
+                return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+            },
+            elasticBoth: function(t, b, c, d, a, p){
+                if (t === 0) {
+                    return b;
+                }
+                if ( (t /= d/2) == 2 ) {
+                    return b+c;
+                }
+                if (!p) {
+                    p = d*(0.3*1.5);
+                }
+                if ( !a || a < Math.abs(c) ) {
+                    a = c;
+                    var s = p/4;
+                }
+                else {
+                    var s = p/(2*Math.PI) * Math.asin (c/a);
+                }
+                if (t < 1) {
+                    return - 0.5*(a*Math.pow(2,10*(t-=1)) *
+                        Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+                }
+                return a*Math.pow(2,-10*(t-=1)) *
+                    Math.sin( (t*d-s)*(2*Math.PI)/p )*0.5 + c + b;
+            },
+            backIn: function(t, b, c, d, s){     //回退加速（回退渐入）
+                if (typeof s == 'undefined') {
+                    s = 1.70158;
+                }
+                return c*(t/=d)*t*((s+1)*t - s) + b;
+            },
+            backOut: function(t, b, c, d, s){
+                if (typeof s == 'undefined') {
+                    s = 3.70158;
+                }
+                return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+            },
+            backBoth: function(t, b, c, d, s){
+                if (typeof s == 'undefined') {
+                    s = 1.70158;
+                }
+                if ((t /= d/2 ) < 1) {
+                    return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+                }
+                return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+            },
+            bounceIn: function(t, b, c, d){    //弹球减振（弹球渐出）
+                return c - Tween['bounceOut'](d-t, 0, c, d) + b;
+            },
+            bounceOut: function(t, b, c, d){
+                if ((t/=d) < (1/2.75)) {
+                    return c*(7.5625*t*t) + b;
+                } else if (t < (2/2.75)) {
+                    return c*(7.5625*(t-=(1.5/2.75))*t + 0.75) + b;
+                } else if (t < (2.5/2.75)) {
+                    return c*(7.5625*(t-=(2.25/2.75))*t + 0.9375) + b;
+                }
+                return c*(7.5625*(t-=(2.625/2.75))*t + 0.984375) + b;
+            },
+            bounceBoth: function(t, b, c, d){
+                if (t < d/2) {
+                    return Tween['bounceIn'](t*2, 0, c, d) * 0.5 + b;
+                }
+                return Tween['bounceOut'](t*2-d, 0, c, d) * 0.5 + c*0.5 + b;
+            }
+        };
+        function tMove( obj , json , time , type , callback ) {
+            window.requestAnimationFrame = window.requestAnimationFrame||function(a){return setTimeout(a,1000/60)};
+            window.cancelAnimationFrame = window.cancelAnimationFrame||clearTimeout;
+            var sss = {};
+            if ( typeof type === "function" ){
+                callback = type;
+                type = "easeBoth";
+            }else{
+                type = type || "easeBoth";
+            }
+            var cssJson = obj.currentStyle || getComputedStyle(obj);
+            var start = {},S = {};
+            for (var key in json) {
+                start[key] = parseFloat(cssJson[key]);//储存每个属性的 初始值
+                S[key] = json[key] - start[key];//存储每个属性的 总路程
+                if ( !S[key] ){
+                    delete start[key];
+                    delete S[key];
+                }
+            }
+            var sTime = new Date();
+            (function fn() {
+                var t = new Date() - sTime; //经过了多长时间
+                t>= time?t=time:sss.timer=requestAnimationFrame(fn);
+                for (var key in S) {
+                    var val = Tween[type](t , start[key] , S[key] , time);
+                    if ( key === "opacity" ){
+                        obj.style[key] = val;
+                        obj.style.filter = "alpha(opacity="+ val*100 +")";
+                    }else{
+                        obj.style[key] = val + 'px';
+                    }
+                }
+                if(t===time)callback && callback.call( obj );
+            })();
+            return sss;
+        }
+        window.tMove = tMove;
+        return tMove;
+    })();
+    (function () {
+        var aTab = document.querySelectorAll("#banner .tab span"),
+            aLi = document.querySelectorAll("#banner ul li"),
+            aBtn = document.querySelectorAll("#banner .btn div"),
+            banner = document.querySelector("#banner"),
+            timer = null,
+            clickTimer = 0;
+
+        function fn(num) {
+            if(new Date() - clickTimer>500){
+                aTab[index].style.background = "#fff";
+                aLi[index].style.display = "none";
+                aLi[index].style.opacity = "0";
+                aLi[index].style.filter = "alpha(opacity='0')";
+                tMove( aLi[index] ,{opacity:0},500);
+
+                index = num;
+                index %= length;
+                if(index<0)index = length-1;
+
+                aTab[index].style.background = "#911";
+                aLi[index].style.display = "block";
+                aLi[index].style.opacity = "0";
+                aLi[index].style.filter = "alpha(opacity='0')";
+                tMove( aLi[index] ,{opacity:1},500);
+
+                clickTimer = new Date();
+            }
+        }
+        //点击变化图片
+        for(var i=0,length = aTab.length;i<length;i++){
+            var index = 0;
+            aTab[i].i = i;
+            aTab[i].onclick = function () {
+                if(this.i === index){
+                    return;
+                }
+                fn(this.i)
+            }
+        }
+        //前后切换
+        for( i= 0;i<2;i++){
+            if(i){
+                aBtn[i].onclick = function () {
+                    fn(index+1)
+                }
+            }else{
+                aBtn[i].onclick = function () {
+                    fn(index-1)
+                }
+            }
+        }
+        //自动轮播
+        auto();
+        function auto() {
+            timer = setInterval(function () {
+                fn(index+1);
+            },3000);
+        }
+        banner.onmouseenter = function () {
+            clearTimeout(timer);
+        };
+        banner.onmouseleave = function () {
+            auto();
+        };
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html><!--声明文档类型-->
+<html lang="en">
+	<head>
+		<!--声明当前页面编码集；charset=gbk,gbk2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Document</title>
+		<meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+		<meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+		<style>
+		*{margin: 0;padding: 0;}
+		ul li{list-style: none;}
+		#box{
+			width: 800px;
+			height: 600px;
+			margin: 100px auto;
+			border: 1px solid red;
+			border-radius: 10px;
+		}
+		#box .nav{
+			width: 90%;
+			height: 15%;
+			margin: 50px auto;
+			/* border: 1px solid red; */
+			text-align: center;
+		}
+		#box .nav input[type="text"]{
+			margin: 10px 10px;
+			height: 40px;
+			width: 180px;
+			border-radius: 5px;
+			text-indent: 10px;
+			outline: none;
+			font-size: 18px;
+			border: 1px solid red;
+		}
+		#box .nav input[type="button"]{
+			margin: 10px 10px;
+			height: 40px;
+			width: 75px;
+			border-radius: 10px;
+			/* border: 1px solid red; */
+			outline: none;
+			background: #cc9933;
+			font-size: 18px;
+			color: #ffffff;
+		}
+		#box .content{
+			width: 90%;
+			height: 80%;
+			margin: 10px auto;
+		}
+		#box .content p{
+			text-indent: 2em;
+			font-size: 20px;
+			/* font-weight: bold; */
+		}
+		#box .content p span{
+			font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="nav">
+				<input type="text" placeholder="请输入查找的内容"/>
+				<input type="button" value="查找"/>
+				<input type="text" placeholder="请输入替换的内容"/>
+				<input type="button" value="替换"/>
+				<input type="button" value="确定"/>
+			</div>
+			<div class="content">
+				<p>为什么遇到如此强大的敌人你也不愿逃跑？—— 那是因为身后，有至爱之人。</p>
+				<p>人什么时候才会死？被子弹贯穿心脏的时候？不对！得了不治之症的时候？不对！喝下毒蘑菇汤的时候？不对！是被人遗忘的时候！</p>
+				<p>不要随随便便同情失败者，这会伤了他的自尊心。</p>
+				<p>灾难总是接踵而至，这正是世间的常理。你以为只要解释一下，就有谁会来救你吗？要是死了，就只能说明我不过是如此程度的男人。</p>
+				<p>胜利与失败都要品尝，经历了四处逃窜的辛酸，痛苦伤心的回忆，才能真正成为独当一面的男子汉，就算痛哭流涕也没关系.</p>
+			</div>
+		</div>
+	<script type="text/javascript">
+		var cText = document.getElementsByTagName("input")[0];
+		var tText = document.getElementsByTagName("input")[2];
+		var cButton = document.getElementsByTagName("input")[1];
+		var tButton = document.getElementsByTagName("input")[3];
+		var button = document.getElementsByTagName("input")[4];
+		var op = document.getElementsByClassName("content")[0].getElementsByTagName("p");
+		var len = op.length;
+		//alert(op[0].innerHTML);
+		//alert(cText.value);
+		
+		cButton.onclick=function(){
+            //console.log(__filename);
+            //遍历所有p标签
+			var val = cText.value;
+			for (var i=0;i<len ; i++){
+				var arr = op[i].innerHTML;
+				if (val!=""){
+					str = arr.split(val);
+					op[i].innerHTML = str.join('<span>'+val+'</span>');	
+				}else{
+					alert("请输入需要查找的文本");
+					break;
+				}
+				//遍历arr字符串的所有字
+				
+			}
+		}
+		tButton.onclick=function(){
+			var val = cText.value;
+			var val2 = tText.value;
+			for (var i=0;i<len ; i++){
+				var arr = op[i].innerHTML;
+				if (val!=""){
+					str = arr.split(val);
+					op[i].innerHTML = str.join('<span>'+val2+'</span>');
+				}else{
+					alert("请输入需要替换的文本");
+					break;
+				}
+			}
+		}
+		button.onclick=function(){
+			for (var i=0;i<len ; i++){
+				var arr = op[i].innerHTML;
+				//通过分割span来将文字样式去掉
+				str = arr.split("<span>");
+				str = str.join("");
+				str = str.split("</span>");
+				op[i].innerHTML = str.join("");
+			}
+		}
+	</script>
+	</body>
+</html>

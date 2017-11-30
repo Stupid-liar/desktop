@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <meta name="keywords" content="东东"/>
+    <meta name="description" content=""/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: red;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #000;
+            cursor: move;
+            user-select: none;
+            z-index: 90;
+        }
+        #box{
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            width: 300px;
+            height: 300px;
+        }
+        #box div.e{
+            position: absolute;
+            right: 0;
+            width: 30px;
+            height: 300px;
+            background: orange;
+            cursor: e-resize;
+        }
+        #box div.s{
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            height: 30px;
+            background: orange;
+            cursor: s-resize;
+        }
+        #box div.w{
+            position: absolute;
+            left: 0;
+            width: 30px;
+            height: 300px;
+            background: orange;
+            cursor: w-resize;
+        }
+        #box div.n{
+            position: absolute;
+            top: 0;
+            width: 300px;
+            height: 30px;
+            background: orange;
+            cursor: n-resize;
+        }
+        #box div.en{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background: black;
+            cursor: ne-resize;
+        }
+        #box div.ws{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 30px;
+            background: black;
+            cursor: sw-resize;
+        }
+        #box div.es{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background: black;
+            cursor: se-resize;
+        }
+        #box div.wn{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: black;
+            cursor: nw-resize;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div id="box">
+        <div class="e"></div>
+        <div class="s"></div>
+        <div class="w"></div>
+        <div class="n"></div>
+        <div class="en"></div>
+        <div class="es"></div>
+        <div class="ws"></div>
+        <div class="wn"></div>
+    </div>
+    <script>
+        var oBox = document.getElementsByClassName("box")[0],
+        //var oBox2 = document.getElementsByClassName("box2")[0],
+            maxW = document.documentElement.clientWidth,
+            maxH = document.documentElement.clientHeight,
+            width = oBox.clientWidth;
+
+        window.onresize = function(){
+            maxW = document.documentElement.clientWidth;
+            maxH = document.documentElement.clientHeight;
+        };
+        console.log(maxW);
+        oBox.onmousedown = function(e){
+
+            e = e || window.event;
+            var sL = e.clientX;
+            var sT = e.clientY;
+            var oW = this.offsetLeft;
+            var oH = this.offsetTop;
+            //console.log(oW);
+            document.onmousemove = function (e) {
+                e = e || window.event;
+                var eL = e.clientX;
+                var eT = e.clientY;
+
+                var x_ = eL -sL;
+                var y_ = eT -sT;
+                //console.log(x_, y_);
+                var left =  x_ + oW;
+                var top = y_ + oH;
+
+                oBox.style.left =left + 'px';
+                oBox.style.top = top + 'px';
+            }
+        };
+        oBox.onmouseup = function () {
+            document.onmousemove = null;
+        };
+//        var aDiv = document.querySelectorAll("#box div");
+//        for( var i=0;i<aDiv.length;i++){
+//            aDiv[i].onmousedown = function () {
+//                console.log(0);
+//            }
+//        }
+        var speed = 10;
+        document.onkeydown = function (e) {
+            e = e || window.event;
+            var oW = oBox.offsetLeft;
+            var oH = oBox.offsetTop;
+            if(e.keyCode === 38){
+                oH -= speed;
+            }
+            if(e.keyCode === 40){
+                oH += speed;
+            }
+            if(e.keyCode === 37){
+                oW -= speed;
+            }
+            if(e.keyCode === 39){
+                oW += speed;
+            }
+            if(oH<=0){
+                oH = 0;
+            }
+            if(oH>=maxH-width){
+                oH = maxH-width;
+            }
+            if(oW<=0){
+                oW = 0;
+            }
+            if(oW>= maxW-width){
+                oW = maxW-width;
+            }
+            oBox.style.top = oH +"px";
+            oBox.style.left = oW +"px";
+        }
+
+    </script>
+</body>
+</html>

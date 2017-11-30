@@ -1,0 +1,181 @@
+<!doctype html><!--声明文档类型-->
+<html lang="en">
+	<head>
+		<!--声明当前页面编码集；charset=gbk,gbk2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Document</title>
+		<meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+		<meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<style>
+		*{margin: 0;padding: 0;}
+		ul li{list-style: none;}
+		a{ text-decoration:none;}
+		
+		#time{
+			width: 320px;
+			height: 80px;
+			margin: 100px auto;
+		}
+		#time ul{
+			width: 600px;
+			height: 60px;
+		}
+		#time ul:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		#time ul li{
+			position: relative;
+			overflow: hidden;
+			float: left;
+			width: 40px;
+			height: 60px;
+			margin: 5px;
+		}
+		#time ul li div{
+			position: absolute;
+		}
+		#time ul li div span{
+			display: inline-block;
+			width: 40px;
+			height: 60px;
+		}
+		#time ul li div span.dot{
+			background: url("img/d.png")no-repeat center;
+		}
+		#time ul li div span.l0{
+			background: url("img/0.png")no-repeat;
+		}
+		#time ul li div span.l1{
+			background: url("img/1.png")no-repeat;
+		}
+		#time ul li div span.l2{
+			background: url("img/2.png")no-repeat;
+		}
+		#time ul li div span.l3{
+			background: url("img/3.png")no-repeat;
+		}
+		#time ul li div span.l4{
+			background: url("img/4.png")no-repeat;
+		}
+		#time ul li div span.l5{
+			background: url("img/5.png")no-repeat;
+		}
+		#time ul li div span.l6{
+			background: url("img/6.png")no-repeat;
+		}
+		#time ul li div span.l7{
+			background: url("img/7.png")no-repeat;
+		}
+		#time ul li div span.l8{
+			background: url("img/8.png")no-repeat;
+		}
+		#time ul li div span.l9{
+			background: url("img/9.png")no-repeat;
+		}
+		</style>
+	</head>
+	<body>
+	<div id="time">
+		<ul>
+			<li>
+				<div class="div"><span class="first num l0"></span><span class="second"></span></div>
+			</li>
+			<li>
+				<div class="div"><span class="first num l0"></span><span class="second"></span></div>
+			</li>
+			<li>
+				<div><span class="dot"></span></div>
+			</li>
+			<li>
+				<div class="div"><span class="first num l0"></span><span class="second"></span></div>
+			</li>
+			<li>
+				<div class="div"><span class="first num l0"></span><span class="second"></span></div>
+			</li>
+			<li>
+				<div><span class="dot"></span></div>
+			</li>
+			<li>
+				<div class="div"><span class="first num l0"></span><span class="second"></span></div>
+			</li>
+			<li>
+				<div class="div"><span class="first num l0"></span><span class="second"></span></div>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var aFirst = document.querySelectorAll("#time ul li div span.first"),
+			aSecond = document.querySelectorAll("#time ul li div span.second"),
+			Div = document.querySelectorAll("#time ul li div.div"),
+			length = aFirst.length,
+			goudan = true,
+			lastStr = "";
+		function fn(){
+			var nowData = new Date();
+			var H = nowData.getHours();
+			var M = nowData.getMinutes();
+			var S = nowData.getSeconds();
+			H = toTwo(H);
+			M = toTwo(M);
+			S = toTwo(S);
+			var times = H.toString()  + M.toString() + S.toString();
+            if(goudan){
+				for(var i = 0;i< length;i++ ){
+					Div[i].i = i;
+					aFirst[i].className = "first num l" + times.charAt(i);
+				}
+				goudan = false;
+			}else{
+				for(i = 0;i< length;i++ ){
+					aSecond[i].className = "first num l"+times.charAt(i);
+					if(lastStr.charAt(i) !== times.charAt(i)){
+						//console.log(lastStr)
+						move(Div[i],"top",-60,5,function(){
+							this.style.top = '0px';
+							aFirst[this.i].className = "first num l"+times.charAt(this.i);
+						});
+					}
+				}
+			}
+			lastStr = times;
+		return fn;
+		}
+		setInterval(fn(),1000);
+
+		function toTwo(str){
+			if(str<10){
+				str = "0"+str;
+			}
+			return str;
+		}
+
+		function move( obj , attr , endW , speed,cb ) {
+			window.requestAnimationFrame = window.requestAnimationFrame || function (fn) {return setTimeout(fn , 1000/60)};
+			window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
+			var cssJson = obj.currentStyle || getComputedStyle(obj);
+			var startW = parseFloat(cssJson[attr]);
+			//var endW = target;
+			//var speed = 10;
+			var flag = startW > endW;
+			if ( flag )speed = -speed;
+			(function fn(){
+				startW += speed;
+				(flag?startW <= endW:startW >= endW)?startW = endW:requestAnimationFrame(fn);
+				obj.style[attr] = startW+'px';
+				if(startW==endW){
+					cb&&cb.call(obj);
+				}
+			})();
+		}
+
+	</script>
+
+
+	</body>
+</html>

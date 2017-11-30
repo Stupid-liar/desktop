@@ -1,0 +1,77 @@
+<!doctype html><!--声明文档类型-->
+<html lang="en">
+	<head>
+		<!--声明当前页面编码集；charset=gbk,gbk2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Document</title>
+		<meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+		<meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+		<style>
+		*{margin: 0;padding: 0;}
+		ul li{list-style: none;}
+		a{ text-decoration:none;}
+		.clearfix:after{
+			content:"";
+			clear: both;
+			display: block;
+		}
+		.fl-l{
+			float: left;
+		}
+		.time{
+			/* box-shadow: 0 0 10px 0 #000; */
+			width: 400px;
+			height: 60px;
+			margin: 100px auto;
+			display: flex;
+		}
+		.time span{
+			display: inline-block;
+			width: 10%;
+			margin-left: 2%;
+			height: 100%;
+			/* box-shadow: 0 0 10px 0 #000; */
+		}
+		</style>
+	</head>
+	<body>
+	<div class="time">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	
+	<script type="text/javascript">
+		var aSpan = document.getElementsByClassName("time")[0].getElementsByTagName("span");
+		
+		setInterval(change(),1000);
+		function change(){
+			var nowData = new Date();
+			var H = nowData.getHours();
+			var M = nowData.getMinutes();
+			var S = nowData.getSeconds();
+			H = toTwo(H);
+			M = toTwo(M);
+			S = toTwo(S);
+			var times = H +"d" + M +"d"+ S;
+			for(var i=0;i<aSpan.length;i++){
+				aSpan[i].style.background = "url('img/"+times[i]+".png')no-repeat";
+			}
+			return change;
+		}
+		function toTwo(str){
+			if(str<10){
+				str = "0"+str;
+			}
+			return str;
+		}
+		
+	</script>
+	</body>
+</html>

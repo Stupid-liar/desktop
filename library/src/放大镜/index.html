@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="东东"/>
+    <meta name="description" content=""/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            margin: 200px;
+        }
+        #img{
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        #img img{
+            width: 100%;
+            height: 100%;
+        }
+        #img .cover{
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            background: rgba(0,0,0,.3);
+            width: 150px;
+            height: 150px;
+        }
+        #pic{
+            position: absolute;
+            left: 600px;
+            top: 200px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="img">
+        <img src="img/1.jpg" alt="">
+        <div class="cover"></div>
+    </div>
+    <div id="pic"></div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var $img = $("#img"),
+        $cover = $(".cover"),
+        $pic = $("#pic"),
+        $cW = $cover.width(),
+        $cH = $cover.height(),
+        $cL = $img.offset().left,
+        $cT = $img.offset().top,
+        maxW =$img.width() - $cW,
+        maxH =$img.height() - $cH,
+        pW = $img.width(),
+        pH = $img.height();
+    $img.hover(function(){
+        $pic.show();
+        $cover.show();
+        $(this).mousemove(function (e) {
+
+            var x = e.pageX - $cL,
+                y = e.pageY - $cT,
+                cX = x - $cW/2,
+                cY = y - $cH/2,
+                size = pW*pW/$cW +'px '+pH*pH/$cH + 'px';
+                src = $(this).find("img").prop("src");
+            cX = Math.max(cX,0);
+            cX = Math.min(cX,maxW);
+            cY = Math.max(cY,0);
+            cY = Math.min(cY,maxH);
+            $cover.css({
+                left: cX +"px",//在图片部分的x和y值
+                top: cY +"px",
+                cursor: "move"
+            });
+
+            $pic.css({
+                backgroundImage : "url("+src+")",
+                backgroundSize : size,
+                backgroundRepeat : "no-repeat",
+                backgroundPosition : -cX*pW/$cW+'px '+-cY*pH/$cH+'px '//对应的比例
+
+            })
+        })
+    },function () {
+        $pic.hide();
+        $cover.hide();
+    });
+
+</script>
+</body>
+</html>

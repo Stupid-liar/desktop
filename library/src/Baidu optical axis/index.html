@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="东东"/>
+    <meta name="description" content=""/>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul,ol,dl,dt,li{ list-style: none;}
+        body,html{
+            position: relative;
+        }
+        #box{
+            width: 1100px;
+            margin: 0 auto;
+        }
+        #fix{
+            position: fixed;
+            top: 0;
+            display: none;
+            z-index: 999;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+        }
+        header{
+            width: 1300px;
+        }
+        footer{
+            height: 3000px;
+        }
+        #content{
+            position: relative;
+            width: 650px;
+        }
+        #box>p{
+            font-size: 26px ;
+            line-height: 40px;
+        }
+        #con{
+            margin-top: 20px;
+            margin-left: 30px;
+            padding-left: 50px;
+            border-left: 1px dashed greenyellow;
+        }
+        #con p{
+            line-height: 34px;
+            font-size: 18px;
+        }
+
+        #con ul li{
+            position: relative;
+            margin-top: 50px;
+        }
+        #con ul li span{
+            position: absolute;
+            top: 0;
+            left: -67px;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #58c648;
+            color: #fff;
+            text-align: center;
+            line-height: 32px;
+        }
+        #pot{
+            display: none;
+            position: fixed;
+            top: 40px;
+            background: #fff;
+            margin-left: 14px;
+            height: 0;
+            overflow: hidden;
+        }
+        #pot li{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #58c648;
+            color: #fff;
+            text-align: center;
+            line-height: 32px;
+            cursor: pointer;
+        }
+        #pot li:hover{
+            background: #58c648 !important;
+        }
+        #pot li.on{
+            background: #1dc6a3;
+        }
+    </style>
+</head>
+<body>
+<div id="fix">
+    <img src="img/top.png" alt="">
+</div>
+<div id="box">
+
+    <header>
+        <img src="img/header.png" alt="">
+    </header>
+    <p>方法/步骤</p>
+    <hr>
+    <div id="content">
+
+        <div id="con">
+            <ul>
+                <li>
+                    <p>试用后油法，将面团揉成团，面包机30分钟即可！牛奶要用凉的，因为面包机揉面温度较高！</p>
+                    <img src="img/1.jpg" alt=""><span>1</span>
+                </li>
+                <li>
+                    <p>揉好的面团，用手抻开可以抻成薄一些的膜，有一定的扩展性！</p>
+                    <img src="img/2.jpg" alt=""><span>2</span>
+                </li>
+                <li>
+                    <p>然后揉成团，放入面包机中就行第一次发酵，发酵约1小时，是原面团的2倍大！用手按下去无回缩就证明发酵好了！</p>
+                    <img src="img/3.jpg" alt=""><span>3</span>
+                </li>
+                <li>
+                    <p>发酵好的面团排气揉光滑，称重</p>
+                    <img src="img/4.jpg" alt=""><span>4</span>
+                </li>
+                <li>
+                    <p>将面团平均分成5份，揉成光滑的面团！盖上保鲜膜醒发15分钟</p>
+                    <img src="img/5.jpg" alt=""><span>5</span>
+                </li>
+                <li>
+                    <p>然后揉成你想放的模具中，没有就用纸拖，或可以不用也行。</p>
+                    <img src="img/6.jpg" alt=""><span>6</span>
+                </li>
+                <li>
+                    <p>将烤箱中放一碗热水保持湿度，把面包生坯放入烤箱就行二次发酵，烤箱温度不易超过30度，发酵40分钟！</p>
+                    <img src="img/7.jpg" alt=""><span>7</span>
+                </li>
+                <li>
+                    <p>然后烤箱预热180度，上下火加热中下层烤20左右即可！</p>
+                    <img src="img/8.jpg" alt=""><span>8</span>
+                </li>
+                <li>
+                    <p>软软的很好吃！</p>
+                    <img src="img/9.jpg" alt=""><span>9</span>
+                </li>
+                END
+            </ul>
+        </div>
+        <ul id="pot">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+    </div>
+    <footer>
+
+    </footer>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(function () {
+    var conH = $("#con").offset().top,
+        contentH = $("#con").height(),
+        fixH = $("#fix").height(),
+        conArr = [],
+        $li = $("#con").find("ul li"),
+        length = $li.length,
+        index = null,
+        $fix = $("#fix"),
+        $pot = $("#pot"),
+        potW = $pot.find("li").width();
+    for(var i=0;i<length;i++){
+        conArr[i] = $($li[i]).offset().top;
+    }
+    $(window).scroll(function () {
+        var scrollTop = $(document).scrollTop(),
+            minW = conArr[0] - fixH;
+        scrollTop > 200?$fix.show():$fix.hide();
+
+        for( var i =0;i<length;i++){
+            if(scrollTop > conArr[i]-fixH-potW*i){
+                index = i;
+            }else {
+                break;
+            }
+        }
+        if(scrollTop<minW){
+            $pot.css("display","none")
+        }
+        if(scrollTop > conH-fixH && scrollTop<conH+contentH){
+            $pot.css({
+                display: "block",
+                height: potW*(index+1),
+                top: fixH
+            });
+            $pot.find("li").eq(index).removeClass("on").siblings().addClass("on");
+        }
+        if(scrollTop > conH+contentH-potW*length){
+            var x = Math.ceil((scrollTop-contentH-conH+potW*length)/potW);
+            var top = -x*potW;
+            $pot.css("top",top);
+        }
+    })
+    $("#pot").find("li").click(function () {
+        $("html,body").stop().animate({
+            scrollTop: conArr[$(this).index()]-fixH
+        })
+    })
+});
+</script>
+</body>
+</html>

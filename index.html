@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Document</title>
+    <meta name="Keywords" content="关键词，关键字"><!--英文逗号隔开 31字-->
+    <meta name="Author" content="Name">
+    <meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+        body,html{
+            background: #000000;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+        #main ul li:nth-child(1){background: url("img/pic1.png")no-repeat 50% 30%}
+        #main ul li:nth-child(2){background: url("img/pic2.png")no-repeat 50% 30%}
+        #main ul li:nth-child(3){background: url("img/pic3.png")no-repeat 50% 30%}
+        #main ul li:nth-child(4){background: url("img/pic4.png")no-repeat 50% 30%}
+        #main ul li:nth-child(5){background: url("img/pic5.png")no-repeat 50% 30%}
+        #main ul li:nth-child(6){background: url("img/pic6.png")no-repeat 50% 30%}
+        #main ul li:nth-child(7){background: url("img/pic7.png")no-repeat 50% 30%}
+        #main ul li:nth-child(8){background: url("img/pic8.png")no-repeat 50% 30%}
+        #main ul li:nth-child(9){background: url("img/pic9.png")no-repeat 50% 30%}
+        #main ul li:nth-child(10){background: url("img/pic10.png")no-repeat 50% 30%}
+        #main ul li:nth-child(11){background: url("img/pic11.png")no-repeat 50% 30%}
+        #main ul{
+            position: relative;
+        }
+        #main ul li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75px;
+            height: 90px;
+            border-radius: 5px;
+            opacity: 1;
+            padding: 5px;
+        }
+        #main ul li.select,#main ul li:hover{
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 3px 0 #ffffff;
+        }
+        #main ul li p{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <ul>
+        <li data_src="null">
+            <p>1</p>
+        </li>
+        <li data_src="null">
+            <p>2</p>
+        </li>
+        <li data_src="null">
+            <p>3</p>
+        </li>
+        <li data_src="null">
+            <p>4</p>
+        </li>
+        <li data_src="null">
+            <p>5</p>
+        </li>
+        <li data_src="null">
+            <p>6</p>
+        </li>
+        <li data_src="null">
+            <p>7</p>
+        </li>
+        <li data_src="null">
+            <p>8</p>
+        </li>
+        <li data_src="library">
+            <p>library</p>
+        </li>
+        <li data_src="null">
+            <p>10</p>
+        </li>
+        <li data_src="null">
+            <p>11</p>
+        </li>
+    </ul>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        var $li = $("#main").find("ul li"),
+            liW = $li.outerWidth(),
+            liH = $li.outerHeight(),
+            windowH = $(window).height(),
+            windowW = $(window).width(),
+            num = 6,
+            h_ = Math.max((windowH - liH*num)/(num+1),0),
+            num_y = Math.floor(windowW/(h_+liW));
+
+        //窗口改变
+        init();
+        $(window).resize(function () {
+            windowH = $(window).height();
+            windowW = $(window).width();
+            num_y = Math.floor(windowW/(h_+liW));
+            h_ = Math.max((windowH - liH*num)/(num+1),0);
+            $li.each(function (i) {
+                $(this).css({
+                    left: this.x*(liW + h_) + h_/2 + "px",
+                    top: this.y*(liH + h_) + h_/2 + "px"
+                })
+            });
+        });
+
+        //初始化
+        function init() {
+            $li.each(function (i) {
+                this.x = Math.floor(i/num);
+                this.y = i%num;
+                $(this).css({
+                    left: this.x*(liW + h_) + h_/2 + "px",
+                    top: this.y*(liH + h_) + h_/2 + "px"
+                });
+            })
+        }
+
+        //构造原型数组删除指定元素（参考）
+        Array.prototype.remove = function(val) {
+            var index = this.indexOf(val);
+            if (index > -1) {
+                this.splice(index, 1);
+            }
+        };
+
+        //拖拽
+        (function () {
+            $li.each(function (i) {
+//                $(this).hover(function () {
+//                    $(this).addClass("select");
+//                },function () {
+//                    $(this).removeClass("select");
+//                });
+                $(this).mousedown(function (e) {
+                    var This = [];
+                    e.stopPropagation();
+                    if($(this).hasClass("select")){
+                        $li.each(function (j) {
+                            if($(this).hasClass("select")){
+                                This.push(this);
+                            }
+                        })
+                    }else {
+                        $li.each(function () {
+                            $(this).removeClass("select");
+                        });
+                        This[0] = this;
+                    }
+                    this.ifMove = false;
+                    var xS = e.clientX,
+                        yS = e.clientY;//初始位置
+                    var left = [],top = [];
+                    var sX = [],sY = [];
+                    for(var k = 0;k<This.length; k++){
+                        left[k] = $(This[k]).offset().left;
+                        top[k] = $(This[k]).offset().top;//初始宽高
+
+                        sX[k] = This[k].x;
+                        sY[k] = This[k].y;//点击初始坐标
+                    }
+
+                    $(document).mousemove(function (e) {
+                        //判断是否拖动来控制点击事件
+                        $(This[i]).mousemove(function () {
+                            This[i].ifMove = true;
+                        });
+
+                        var x_ = e.clientX - xS,
+                            y_ = e.clientY - yS;//变化量
+
+                        for(var k = 0;k<This.length; k++){
+                            $(This[k]).css({
+                                left: left[k] + x_ +"px",
+                                top: top[k] + y_ + "px"
+                            });
+
+                            //控制四个方向不出界
+//                            This[k].x = Math.max(Math.round((left[k] + x_-h_/2)/(liW + h_)),0);
+//                            This[k].x = Math.min(This[k].x,num_y-1);
+//                            This[k].y = Math.max(Math.round((top[k] + y_-h_/2)/(liH + h_)),0);
+//                            This[k].y = Math.min(This[k].y,num-1);
+                            This[k].x = Math.round((left[k] + x_-h_/2)/(liW + h_));
+                            This[k].y = Math.round((top[k] + y_-h_/2)/(liH + h_));
+                        }
+
+
+                    });
+                    $(document).mouseup(function () {
+                        var sibling = [];
+                        if(This.ifMove) {
+                            //还没想好如何共存问题
+                        }
+                        //判断是否于兄弟元素冲突
+                        $li.each(function () {
+                            if(!$(this).hasClass("select")){
+                                sibling.push(this);
+                            }
+                        });
+                        if(This.length === 1){
+                            //sibling.remove(This[0]);使用构造原型函数
+                            var index = sibling.indexOf(This[0]);
+                            if (index > -1) {
+                                sibling.splice(index, 1);
+                            }
+                        }
+                        for(var i = 0;i<sibling.length;i++){
+                            for(var j = 0;j<This.length;j++){
+                                if(This[j].x === sibling[i].x && This[j].y === sibling[i].y || This[j].y<0 || This[j].x<0 || This[j].y >num-1||This[j].x>num_y-1){
+                                    for(k = 0;k<This.length;k++){
+                                        This[k].x = sX[k];
+                                        This[k].y = sY[k];
+                                    }
+                                }
+                            }
+                        }
+
+                        for(var k = 0;k<This.length; k++) {
+                            $(This[k]).css({
+                                left: This[k].x * (liW + h_) + h_ / 2 + "px",
+                                top: This[k].y * (liH + h_) + h_ / 2 + "px"
+                            });
+                        }
+                        $(document).off("mousemove");
+                        $(document).off("mouseup");
+                    })
+                })
+            })
+        })();
+
+        //双击
+        !function () {
+            $li.each(function () {
+                $(this).dblclick(function (e) {
+                    window.open(""+$(this).attr('data_src')+"/index.html","_self");
+                })
+            })
+        }()
+
+        //选中拖拽
+        $(document).mousedown(function (e) {
+            $li.each(function () {
+                $(this).removeClass("select");
+            });
+            var xS = e.clientX,
+                yS = e.clientY,
+                $div = $("<div id='select'></div>");
+            $('body').append($div);
+//            document.body.appendChild(div);
+            $(document).mousemove(function (e) {
+                var x_ = e.clientX - xS,
+                    y_ = e.clientY - yS;
+
+                $($div).css({
+                    position: 'absolute',
+                    border: '1px dashed #fff',
+                    width: Math.abs(x_),
+                    height: Math.abs(y_)
+                });
+
+                if(x_ < 0 && y_<0){
+                    $($div).css({
+                        left: xS + x_,
+                        top: yS + y_
+                    });
+                }else if(x_<0&&y_>0){
+                    $($div).css({
+                        left: xS + x_,
+                        top: yS
+                    });
+                }else if(x_>0&&y_<0){
+                    $($div).css({
+                        left: xS,
+                        top: yS + y_
+                    });
+                }else {
+                    $($div).css({
+                        left: xS,
+                        top: yS
+                    });
+                }
+//                $li.prop("class","select");
+//                $li.addClass("select");
+                $li.each(function () {
+                    if(pz( $(this) , $div)){
+                        $(this).addClass("select");
+                    }else {
+                        $(this).removeClass("select");
+                    }
+                })
+            });
+            $(document).mouseup(function () {
+                $(document).off("mousemove");
+                $(document).off("mouseup");
+                $div.remove();
+            })
+        })
+
+        //碰撞检测
+        function pz( $obj1, $obj2 ) {
+            var oL1 = $obj1.offset().left,
+                oT1 = $obj1.offset().top,
+                oR1 = $obj1.offset().left + $obj1.outerWidth(),
+                oB1 = $obj1.offset().top + $obj1.outerHeight();
+
+            var oL2 = $obj2.offset().left,
+                oT2 = $obj2.offset().top,
+                oR2 = $obj2.offset().left + $obj2.outerWidth(),
+                oB2 = $obj2.offset().top + $obj2.outerHeight();
+            if(oL1>oR2 || oT1>oB2 || oR1<oL2 || oB1<oT2) {
+                return false;
+            }else {
+                return true;
+            }
+        }
+    })
+</script>
+</body>
+</html>
