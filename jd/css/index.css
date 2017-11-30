@@ -1,0 +1,317 @@
+body{
+    min-width: 320px;
+    max-width: 640px;
+    height: auto;
+    font-size: 0.16rem;
+    margin: auto; /*元素居中*/
+}
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999;
+    height: 0.5rem;
+    width: 6.4rem;
+    background: transparent;
+}
+header .content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 94%;
+    height: 0.5rem;
+    margin: auto;
+}
+header .content .h_left{
+    height: 100%;
+    width: 5rem;
+}
+header .content .h_left input{
+    position: absolute;
+    top: 0.10rem;
+    left: 0.05rem;
+    width: 5rem;
+    height: 0.3rem;
+    border-radius: 2rem;
+    text-indent: 0.7rem;
+    font-size: 0.18rem;
+    background: url("../img/header/jd.png")no-repeat 0.1rem center/auto 60%,
+    #fff url(../img/header/search.png)no-repeat 0.4rem center/auto 60%;
+}
+header .content .h_right{
+    position: absolute;
+    right: 0;
+    top: 0.11rem;
+    width: 0.8rem;
+    height: 100%;
+    font-size: 0.18rem;
+    color: #fff;
+}
+/*轮播一*/
+#swiper1{
+    width: 6.4rem;
+    height: auto;
+    text-align: center;
+}
+.swiper-container .swiper-wrapper .swiper-slide img,
+.swiper-container .swiper-wrapper .swiper-slide section{
+    width: 6.4rem;
+    height: auto;
+}
+/*轮播二*/
+#swiper2{
+    width: 6.4rem;
+}
+#swiper2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 3rem;
+    align-content: space-around;
+}
+#swiper2 ul li{
+    width: 20%;
+    text-align: center;
+}
+#swiper2 ul li img{
+    width: 0.58rem;
+}
+#swiper2 ul li p{
+    font: 0.16rem/0.4rem "";
+}
+/*内容部分*/
+.part1{
+    width: 6.4rem;
+
+}
+.part1 img{
+    width: 6.4rem;
+    height: auto;
+}
+.part2,.part5{
+    position: relative;
+    width: 6.4rem;
+    height: 0.8rem;
+    text-align: center;
+}
+.part2>img,.part5>img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.part2 a,.part5 a{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.part2 a img,.part5 a img{
+    width: 1.6rem;
+    height: auto;
+}
+.part3{
+    margin-top: 0.5rem;
+    height: auto;
+}
+.part3 ul.shop1{
+    width: 6.4rem;
+    height: 3rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.part3 ul.shop1 li{
+    width: 45%;
+    height: 1.3rem;
+    margin-left: 0.3rem;
+    box-shadow: 0 0 0.1rem 0 #000;
+    border-radius: 0.2rem;
+    font-size: 0.16rem;
+}
+
+.part3 ul.shop1 li img{
+    float: right;
+    width: 1.1rem;
+    padding-right: 0.2rem;
+    height: auto;
+}
+.part3 ul.shop1 li section{
+    float: left;
+    line-height: 0.4rem;
+    padding-top: 0.3rem;
+    width: 1.5rem;
+    height: 100%;
+    text-align: center;
+    color: #666666;
+}
+.part3 ul.shop2{
+    width: 6.4rem;
+    height: 2rem;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+}
+.part3 ul.shop2 li{
+    width: 20%;
+    height: 2rem;
+    margin-left: 0.3rem;
+    box-shadow: 0 0 0.1rem 0 #000;
+    border-radius: 0.2rem;
+    text-align: center;
+}
+
+.part3 ul.shop2 li img{
+    width: 1.1rem;
+}
+.part3 ul.shop2 li section{
+    line-height: 0.3rem;
+    padding-top: 0.1rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #666666;
+    font-size: 0.16rem;
+}
+/*轮播3*/
+.part4{
+    margin-top: 0.4rem;
+}
+.part5{
+    margin-top: 0.2rem;
+}
+.part5 a{
+    padding-top: 0.2rem;
+}
+.part6{
+    margin-top: 0.2rem;
+}
+.part6 ul{
+    display: flex;
+    flex-flow: wrap;
+    width: 6.4rem;
+    height: auto;
+    justify-content: space-around;
+
+}
+.part6 ul li{
+    width: 40%;
+    height: 4rem;
+    padding: 0.2rem;
+    margin-top: 0.1rem;
+    position: relative;
+}
+.part6 ul li section.top img{
+    width: 100%;
+    height: 100%;
+}
+.part6 ul li section.top a{
+    font: 0.16rem/0.3rem "";
+}
+.part6 ul li section.bottom p:nth-child(1){
+    color: red;
+    font-size: 0.20rem;
+}
+.part6 ul li section.bottom{
+    position: absolute;
+    left: 0.2rem;
+    bottom: 0.2rem;
+    width: 100%;
+    height: auto;
+}
+.part6 ul li section.bottom p:nth-child(2){
+    color: #24fff2;
+    font-size: 0.14rem;
+}
+.part6 ul li section.bottom a{
+    display: block;
+    position: absolute;
+    right: 0.4rem;
+    top: 0.1rem;
+    width: 1rem;
+    height: 0.1rem;
+    border: 1px solid red;
+    padding: 0.1rem;
+    text-align: center;
+    font: 0.16rem/0.1rem "";
+    color: #666666;
+}
+/*结束*/
+.footer{
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+.footer>a{
+    display: block;
+    line-height: 0.5rem;
+}
+.footer ul{
+    width: 80%;
+    height: 0.5rem;
+    margin: auto;
+}
+.footer ul li{
+    float: left;
+    width: 22%;
+    height: 100%;
+    margin-right: 0.09rem;
+    font: 0.16rem/0.5rem "";
+}
+.footer ul li span{
+    margin-left: 0.3rem;
+}
+.footer dl{
+    display: flex;
+    justify-content: space-around;
+    width: 3rem;
+    margin: 0.2rem auto;
+    height: 0.5rem;
+}
+.footer dl dt{
+    width: 0.33rem;
+    height: 0.5rem;
+    position: relative;
+}
+.footer dl a{
+    position: absolute;
+    bottom: -0.1rem;
+    left: -0.18rem;
+    width: 200%;
+    font-size: 0.14rem;
+}
+.footer dl dt:nth-child(1){
+    background: url(../img/footer/jd-sprites.png)no-repeat -1.2rem -0.7rem/2rem 2rem;
+}
+.footer dl dt:nth-child(2){
+    background: url(../img/footer/jd-sprites.png)no-repeat -0.4rem -0.7rem/2rem 2rem;
+}
+.footer dl dt:nth-child(3){
+    background: url(../img/footer/jd-sprites.png)no-repeat -0.8rem -0.7rem/2rem 2rem;
+}
+.footer h2{
+    line-height: 0.5rem;
+    font: 0.14rem/0.5rem "";
+}
+/*尾巴*/
+nav{
+    position: fixed;
+    bottom: 0;
+    width: 6.4rem;
+    height: 0.6rem;
+    background: #fff;
+    z-index: 999;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+}
+nav ul li{
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+nav ul li a img{
+    width: 60%;
+    height: 100%;
+}

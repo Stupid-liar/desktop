@@ -66,45 +66,45 @@
     </style>
 </head>
 <body>
-<div id="main">
-    <ul>
-        <li data_src="null">
-            <p>1</p>
-        </li>
-        <li data_src="null">
-            <p>2</p>
-        </li>
-        <li data_src="null">
-            <p>3</p>
-        </li>
-        <li data_src="null">
-            <p>4</p>
-        </li>
-        <li data_src="null">
-            <p>5</p>
-        </li>
-        <li data_src="null">
-            <p>6</p>
-        </li>
-        <li data_src="null">
-            <p>7</p>
-        </li>
-        <li data_src="null">
-            <p>8</p>
-        </li>
-        <li data_src="library">
-            <p>library</p>
-        </li>
-        <li data_src="null">
-            <p>10</p>
-        </li>
-        <li data_src="null">
-            <p>11</p>
-        </li>
-    </ul>
-</div>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
+    <div id="main">
+        <ul>
+            <li data_src="null">
+                <p>1</p>
+            </li>
+            <li data_src="null">
+                <p>2</p>
+            </li>
+            <li data_src="null">
+                <p>3</p>
+            </li>
+            <li data_src="null">
+                <p>4</p>
+            </li>
+            <li data_src="null">
+                <p>5</p>
+            </li>
+            <li data_src="null">
+                <p>6</p>
+            </li>
+            <li data_src="meizu">
+                <p>魅族</p>
+            </li>
+            <li data_src="null">
+                <p></p>
+            </li>
+            <li data_src="library">
+                <p>library</p>
+            </li>
+            <li data_src="null">
+                <p>10</p>
+            </li>
+            <li data_src="jd">
+                <p>京东</p>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
     $(function () {
         var $li = $("#main").find("ul li"),
             liW = $li.outerWidth(),
@@ -115,8 +115,10 @@
             h_ = Math.max((windowH - liH*num)/(num+1),0),
             num_y = Math.floor(windowW/(h_+liW));
 
-        //窗口改变
+        //初始化执行
         init();
+
+        //窗口改变
         $(window).resize(function () {
             windowH = $(window).height();
             windowW = $(window).width();
@@ -150,14 +152,9 @@
             }
         };
 
-        //拖拽
+        //li的拖拽
         (function () {
             $li.each(function (i) {
-//                $(this).hover(function () {
-//                    $(this).addClass("select");
-//                },function () {
-//                    $(this).removeClass("select");
-//                });
                 $(this).mousedown(function (e) {
                     var This = [];
                     e.stopPropagation();
@@ -176,8 +173,8 @@
                     this.ifMove = false;
                     var xS = e.clientX,
                         yS = e.clientY;//初始位置
-                    var left = [],top = [];
-                    var sX = [],sY = [];
+                    var left = [],top = [];//存放选中li的初始left和top
+                    var sX = [],sY = [];//存放选中li的初始宽和高
                     for(var k = 0;k<This.length; k++){
                         left[k] = $(This[k]).offset().left;
                         top[k] = $(This[k]).offset().top;//初始宽高
@@ -215,7 +212,7 @@
                     $(document).mouseup(function () {
                         var sibling = [];
                         if(This.ifMove) {
-                            //还没想好如何共存问题
+                            //还没想好如何共存问题，这里暂时用双击代替
                         }
                         //判断是否于兄弟元素冲突
                         $li.each(function () {
@@ -223,6 +220,7 @@
                                 sibling.push(this);
                             }
                         });
+                        //只选择一个的问题
                         if(This.length === 1){
                             //sibling.remove(This[0]);使用构造原型函数
                             var index = sibling.indexOf(This[0]);
@@ -230,12 +228,24 @@
                                 sibling.splice(index, 1);
                             }
                         }
-                        for(var i = 0;i<sibling.length;i++){
+                        //全选的问题(特殊情况)
+                        if(sibling.length === 0){
                             for(var j = 0;j<This.length;j++){
-                                if(This[j].x === sibling[i].x && This[j].y === sibling[i].y || This[j].y<0 || This[j].x<0 || This[j].y >num-1||This[j].x>num_y-1){
+                                if(This[j].y<0 || This[j].x<0 || This[j].y >num-1||This[j].x>num_y-1){
                                     for(k = 0;k<This.length;k++){
                                         This[k].x = sX[k];
                                         This[k].y = sY[k];
+                                    }
+                                }
+                            }
+                        }else {
+                            for(var i = 0;i<sibling.length;i++){
+                                for(j = 0;j<This.length;j++){
+                                    if(This[j].x === sibling[i].x && This[j].y === sibling[i].y || This[j].y<0 || This[j].x<0 || This[j].y >num-1||This[j].x>num_y-1){
+                                        for(k = 0;k<This.length;k++){
+                                            This[k].x = sX[k];
+                                            This[k].y = sY[k];
+                                        }
                                     }
                                 }
                             }
@@ -261,7 +271,7 @@
                     window.open(""+$(this).attr('data_src')+"/index.html","_self");
                 })
             })
-        }()
+        }();
 
         //选中拖拽
         $(document).mousedown(function (e) {
@@ -272,7 +282,7 @@
                 yS = e.clientY,
                 $div = $("<div id='select'></div>");
             $('body').append($div);
-//            document.body.appendChild(div);
+            //document.body.appendChild(div);
             $(document).mousemove(function (e) {
                 var x_ = e.clientX - xS,
                     y_ = e.clientY - yS;
@@ -283,7 +293,7 @@
                     width: Math.abs(x_),
                     height: Math.abs(y_)
                 });
-
+                //判断选择框的移动方向
                 if(x_ < 0 && y_<0){
                     $($div).css({
                         left: xS + x_,
@@ -320,7 +330,7 @@
                 $(document).off("mouseup");
                 $div.remove();
             })
-        })
+        });
 
         //碰撞检测
         function pz( $obj1, $obj2 ) {

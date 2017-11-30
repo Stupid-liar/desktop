@@ -1,0 +1,425 @@
+@charset"UTF-8";
+/* 导航 */
+body{
+	width: 1920px;
+	
+}
+nav{
+	min-width: 1200px;
+	position: relative;
+	height: 80px;
+	background: transparent;
+	line-height: 80px;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+nav .header{
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+	color: #000;
+}
+nav:hover{
+	background: #fff;
+}
+nav .h-left{
+	width: 20%;
+	background: transparent;
+	color: #fff;
+	text-align: center;
+}
+nav .h-center{
+	margin-left: 150px;
+}
+nav .h-center>a{
+	margin-left: 25px;
+	
+}
+nav .h-center a ul{
+	position: absolute;
+	top: 80px;
+	left: 0;
+	height: 0px;
+	overflow: hidden;
+	transition: 0.5s;
+	width: 100%;
+	background: #fff;
+}
+nav .h-center a ul li{
+	width: 120px;
+	margin-left: 10px;
+}
+nav .h-center a ul li:first-child{
+	margin-left: 750px;
+}
+nav .h-center a ul li p{
+	margin-top: -15px;
+	color: #000;
+}
+nav .h-center a:hover ul{
+	height: 120px;
+}
+nav .h-center a:hover{
+	color: blue;
+}
+
+nav .h-right a{
+	position: relative;
+}
+nav .h-right a ul{
+	position: absolute;
+	top: 50px;
+	left: -13px;
+	width: 100px;
+	height: 0px;
+	overflow: hidden;
+	background: #fff;
+	transition: 0.5s;
+}
+nav .h-right a ul li{
+	height: 35px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	line-height: 35px
+}
+nav .h-right .person:hover ul{
+	height: 140px;
+}
+nav .h-right a i{
+	position: absolute;
+	left: 35px;
+	top: -35px;
+}
+nav .h-right a img{
+	width: 20px;
+	height: 20px;
+	margin-left: 30px
+}
+/* 轮播 */
+.swiper-container {
+    width: 100%;
+    height: 700px;
+}  
+.swiper-container a img{
+	width: 100%;
+    height: 700px;
+}
+/* part1 */
+.part1 ul{
+	width: 1400px;
+	height: 200px;
+	margin: auto;
+}
+.part1 ul li{
+	height: 100%;
+	width: 25%;
+	text-align: center;
+	margin: 50px auto;
+}
+.part1 ul li p{
+	color: #909090;
+}
+/* part2 */
+.part2{
+	width: 1920px;
+	height: 410px;
+	background: #f7f7f7;
+	margin: 130px auto;
+}
+.part2 .img{
+	width: 620px;
+	height: 410px;
+	margin-left: 350px;
+}
+.part2 .p2-list{
+	width: 600px;
+}
+.part2 .p2-list ul{
+	width: 100%;
+	height: 410px;
+}
+.part2 .p2-list ul li{
+	width: 25%;
+	height: 40%;
+	margin: 30px auto;
+	text-align: center;
+}
+.part2 .p2-list ul li i{
+	font-size: 60px;
+}
+/* part3 */
+.part3{
+	margin: 20px auto;
+}
+.part3 ul{
+	width: 1600px;
+	height: 600px;
+	margin: auto;
+}
+.part3 ul li{
+	position: relative;
+	margin: 30px auto;
+	text-align: center;
+	width: 25%;
+	height: 50%;
+}
+.part3 ul li:hover img:nth-child(1){
+	left: 50px;
+}
+.part3 ul li:hover img:nth-child(2){
+	left: 150px;
+}
+.part3 ul li img{
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	transition: 1s;
+}
+.part3 ul li .mes{
+	margin-top: 430px;
+}
+ul li .mes p:nth-child(3){
+	color: red;
+}
+/* part4 */
+.swiper-container {
+    width: 100%;
+    height: 700px;
+}  
+.part4 .swiper-container{
+	width: 1400px;
+	height: 600px;
+}
+.part4 .swiper-container .swiper-wrapper .swiper-slide ul{
+	height: 300px;
+	width: 1300px;
+	margin: auto;
+}
+.part4 .swiper-container .swiper-wrapper .swiper-slide ul li{
+	width: 25%;
+	height: 300px;
+	text-align: center;
+	margin: 100px auto;
+}
+.part4 .swiper-container .swiper-wrapper .swiper-slide ul li img{
+	width: 200px;
+	height: 300px;
+}
+/* part5 */
+.part5{
+	width: 100%;
+	height: 1200px;
+	margin-top: 30px;
+}
+.part5 ul{
+	width: 80%;
+	margin: auto;
+}
+.part5 ul li{
+	margin-bottom: 10px;
+	width: 25%;
+	height: 25%;
+	text-align: center;
+}
+.part5 ul li a{
+	position: relative;
+}
+.part5 ul li a > img{
+	display: inline-block;
+	width: 250px;
+	height: 220px;
+}
+.part5 ul li a > img + img{
+	position: absolute;
+	left: 0px;
+	top: -100px;
+	display: none;
+	width: 250px;
+	height: 220px;
+}
+.part5 ul li:hover  a img + img{
+	display: block;
+}
+/* part6 */
+.part6{
+	width: 100%;
+	height: 280px;
+	margin: auto;
+}
+.part6 .img{
+	width: 33.3%;
+}
+/* part7 */
+.part7{
+	width: 100%;
+	margin: 50px auto;
+}
+.part7 ul{
+	width: 1600px;
+	margin: auto;
+}
+.part7 ul li{
+	width: 14%;
+	text-align: center;
+}
+.part7 ul li i{
+	font-size: 70px;
+}
+/* part8 */
+.part8{
+	background: #f0f0f0;
+	text-align: center;
+	width: 100%;
+	height: 600px;
+}
+.part8 h3{
+	padding-top: 50px;
+}
+.part8 a{
+	display: inline-block;
+	margin: 20px auto;
+	cursor: pointer;
+}
+.part8 ul {
+	margin: 50px auto;
+	width: 1400px;
+	height: auto;
+}
+.part8 ul li{
+	position: relative;
+	margin-left: 42px;
+}
+.part8 ul li .mark{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	color: #fff;
+	width: 100%;
+	height: 150px;
+}
+.part8 ul li .mark .s-img{
+	position: absolute;
+	left: 10px;
+	bottom: 60px;
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+}
+.part8 ul li .mark .s-img img{
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+}
+.part8 ul li .mark em{
+	position: absolute;
+	left: 10px;
+	bottom: 80px;
+	display: block;
+	font-size: 14px;
+    height: 21px;
+    width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.part8 ul li .mark i{
+	position: absolute;
+	display: block;
+	left: 70px;
+	bottom: 60px;
+}
+.part8 ul li .mark i + i{
+	left: 120px;
+}
+.part8 ul li .mark p{
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	font-size: 18px;
+}
+/* part9 */
+.part9 .bottom{
+	width: 1200px;
+	height: 120px;
+	margin: 50px auto;
+}
+.part9 .bottom .left{
+	width: 75%;
+}
+.part9 .bottom .left img{
+	margin-right: 10px;
+} 
+.part9 .bottom .right{
+	width: 20%;
+	height: 200px;
+	text-align: right;
+}
+.part9 .bottom ul{
+	width: 100%;
+	height: 200px;
+}
+.part9 .bottom ul li{
+	width: 25%;
+	height: 50%;
+	color: #b1b1b1;
+}
+.part9 .bottom .right p{
+	color: blue;
+	margin-bottom: 10px;
+}
+.part9 .bottom .right p + p{
+	font-size: 24px;
+}
+.part9 .bottom .right a{
+	display: block;
+	width: 110px;
+	height: 40px;
+	font: 12px/40px "";
+	background: blue;
+	color: #fff;
+	text-align: center;
+	margin-left: 54%;
+}
+.part9 hr{
+	width: 1300px;
+	margin: auto;
+}
+.part9 .footer{
+	width: 1300px;
+	margin: 10px auto;
+	color: #b1b1b1;
+}
+.part9 .footer a{
+	margin: 0 10px;
+}
+.part9 .footer .b-left{
+	width: 75%;
+}
+.part9 .footer .b-left p,
+.part9 .footer .b-left a{
+	font-size: 12px;
+}
+.part9 .footer .b-right{
+	position: relative;
+	text-align: right;
+	width: 25%;
+	margin-top: -10px;
+}
+.part9 .footer .b-right i{
+	font-size: 24px;
+	margin-left: 10px;
+	
+}
+.part9 .footer .b-right i img{
+	display: none;
+	position: absolute;
+	right: 1px;
+	top: -160px;
+	width: 160px;
+	height: 160px;
+}
+.part9 .footer .b-right i.icon-buchongiconsvg02:hover img{
+	display: block;
+}
