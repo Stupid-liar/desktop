@@ -255,8 +255,9 @@
         oDec.onclick = function (e) {
             this.style.transform = " translateZ(-2000px) rotateY(0deg)";
             this.style.opacity = "0";
+            var This = this;
             setTimeout(function () {
-                this.style.display = "none";
+                This.style.display = "none";
             },300);
             ifClick = true;
             e.cancelBubble = true;
