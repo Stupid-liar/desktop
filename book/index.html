@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Document</title>
+    <meta name="Keywords" content="关键词，关键字">
+    <meta name="Author" content="Name">
+    <meta name="decirption" content="描述信息">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        body,html{
+            background: -webkit-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.3));
+            height: 100%;
+            width: 100%;
+            /*overflow: hidden;*/
+        }
+        #book{
+            width: 600px;
+            height: 800px;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            perspective: 6000px;
+        }
+        #book .zhang{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 600px;
+            height: 800px;
+            transition: 1s;
+            transform-origin: left;
+            /*border-left: 5px solid #ff2b1c;*/
+            transform-style: preserve-3d;
+        }
+        #book .zhang .page{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #ffffff;
+            width: 100%;
+            height: 800px;
+            box-shadow: 1px 0 1px 0 #1dc6a3;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #book .zhang .page:nth-child(2){
+            transform: rotateY(180deg) translateZ(1px);
+        }
+        #book .left{
+            transform: rotateY(-180deg);
+        }
+        #book .zhang .page .img{
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        #book .zhang .page h3{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        #book .zhang .page p{
+            text-indent: 20px;
+            line-height: 30px;
+        }
+        #book .zhang .page .a{
+            position: absolute;
+            left: 0;
+            bottom: 70px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+        }
+        #book .zhang .page hr{
+            position: absolute;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            /*height: 1px;*/
+            border-style: dashed;
+        }
+        #book .zhang .page small{
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            font-size: 12px;
+        }
+        #book .zhang .page .shadow{
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 100%;
+        }
+        #book .zhang .page:nth-child(1) .shadow{
+            background: -webkit-linear-gradient(right,rgba(0,0,0,0),rgba(0,0,0,0.3));
+            left: 0;
+        }
+        #book .zhang .page:nth-child(2) .shadow{
+            background: -webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.3));
+            right: 0;
+        }
+        #book .zhang .page .face{
+            width: 100%;
+            height: 100%;
+        }
+        #book .zhang .page .face img{
+            width: 100%;
+            height: 100%;
+        }
+        /*目录样式*/
+        #list{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 300px;
+            user-select: none;
+            box-shadow: -2px 0 10px 0 #0d0d10;
+            padding: 10px;
+        }
+        #list p,#list .list{
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #list .list{
+            margin-left: 30%;
+            width : 40%;
+            transition: 0.5s;
+            border-radius: 100px;
+        }
+        #list p{
+            width : 15%;
+            float: left;
+            border: 1px solid #000;
+            border-radius: 100px;
+            margin: 6px;
+            transition: 0.5s;
+        }
+        #list p:hover,#list .list:hover{
+            box-shadow: 0 0 10px 0 #0d0d10;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<div id="list">
+    <div class="list">返回目录</div>
+    <!--目录-->
+    <!--<p>1</p>-->
+    <!--<p>2</p>-->
+    <!--<p>3</p>-->
+    <!--<p>4</p>-->
+    <!--<p>5</p>-->
+</div>
+<div id="book">
+    <!--<div class="zhang">-->
+        <!--<div class="page">-->
+            <!--<div class="img"><img src="" alt="这是展示图"></div>-->
+            <!--<h3>这是标题</h3>-->
+            <!--<p>这里是描述</p>-->
+            <!--<hr>-->
+            <!--<div class="a">链接：<a href="http://www.baidu.com">百度首页</a></div>-->
+            <!--<small>-1/20-</small>-->
+            <!--<div class="shadow"></div>-->
+        <!--</div>-->
+        <!--<div class="page"><br><br><br><br><br><br><br><br>模版背面-->
+            <!--<div class="shadow"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="zhang">
+        <div class="page">
+            <div class="face">
+                <img src="img/face.jpg" alt="封面">
+            </div>
+        </div>
+        <div class="page">
+            <div class="shadow"></div>
+        </div>
+    </div>
+    <div class="zhang">
+        <div class="page">
+            <h1>序</h1>
+            <p>一本js打造的书</p>
+            <div class="shadow"></div>
+        </div>
+        <div class="page">序言背面
+            <div class="shadow"></div>
+        </div>
+    </div>
+    <div class="zhang">
+        <div class="page">
+            <h3>书本目录</h3>
+            <div class="shadow"></div>
+        </div>
+        <div class="page">目录背面
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    (function () {
+        var sum = 30,//张数(建议30张以内再多翻书可能会有少许卡顿)
+            x_ = 0.2,//宽度差值
+            oBook = document.getElementById("book"),
+            listPage = 5;//存放目录的差值（以20张纸为例则有5,10,15，等8个粗略页数跳转）
+        Init();//初始化
+
+        var aZhang = document.getElementsByClassName("zhang"),
+            length = aZhang.length,
+            aList = document.getElementById("list");
+
+        InitList();//目录初始化
+        //创建纸张
+        function Init() {
+            //创建主题部分
+            for(var i = 0;i<sum;i++){
+                var Zhang = document.createElement("div");
+                Zhang.className = "zhang";
+                oBook.appendChild(Zhang);
+                Zhang.innerHTML = "<div class='page'>" +
+                                        "<div class='img'>" +
+                                            "<img src='' alt='这是展示图'>" +
+                                        "</div><h3>这是标题</h3><p>这里是描述</p><hr>" +
+                                        "<div class='a'>链接：<a href='http://www.baidu.com'>百度首页</a>" +
+                                        "</div>" +
+                                        "<small>-"+((i*2)+1)+"/"+sum*2+"-</small>" +
+                                        "<div class='shadow'></div>" +
+                                 "</div>" +
+                                    "<div class='page'>" +
+                                        "<div class='img'>" +
+                                            "<img src='' alt='这是展示图'>" +
+                                        "</div><h3>这是标题</h3><p>这里是描述</p><hr>" +
+                                        "<div class='a'>链接：<a href='http://www.baidu.com'>百度首页</a></div>" +
+                                        "<small>-"+(i+1)*2+"/"+sum*2+"-</small>" +
+                                        "<div class='shadow'></div>" +
+                                    "</div>";
+            }
+            //创建封面
+            var last = document.createElement("div");
+            last.className = "zhang";
+            oBook.appendChild(last);
+            last.innerHTML = "<div class='page'><div class='shadow'></div></div>" +
+                "<div class='page'></div>";
+        }
+
+        //创建书本外置目录
+        function InitList() {
+            for(var i = 0;i<Math.floor(sum*2/listPage);i++){
+                var oP = document.createElement("p");
+                oP.innerHTML = ""+(i+1)*listPage+"";
+                aList.appendChild(oP);
+            }
+        }
+
+        //点击事件
+        !function () {
+            var aZhang = oBook.getElementsByClassName("zhang"),
+                last;//存放第一次点击的页数两次相同则不跳转
+
+            //外置目录点击事件
+            aList.onclick = function (e) {
+                var target = e.target;
+                var index;
+                if(target.nodeName === "P"){
+                    index= target.innerHTML;//存放页码点击进行跳转（翻页）
+                }else if(target.nodeName === "DIV"){
+                    index = -1;//目录页数
+                }
+                IntoPage(index)
+            };
+
+            //跳转页码，传递需要跳转的页码
+            function IntoPage(index) {
+                if(last === index){
+                    return;
+                }else {
+                    if(aZhang[Math.floor(index / 2 + 2)].className === "zhang left"){
+                        click.call(aZhang[Math.ceil((index-1)/2+3)]);//使用算法判断页数单双页和左右翻页
+                    }else {
+                        click.call(aZhang[Math.floor(index/2+2)]);
+                    }
+                }
+                last = index;//存放上一次点击页码进行判断
+            }
+
+            //点击事件触发
+            for(var i=0;i<length;i++){
+                aZhang[i].index = i;
+                aZhang[i].style.zIndex = length-i;
+                aZhang[i].onclick = function(){
+                    click.call(this);
+                    last = null;//点击纸张的时候清空上一个last保证目录两次点击有效
+                };
+            }
+
+            //纸张点击事件包括一次点击很多页数（点击到侧边宽度位置处做相同处理）
+            function click() {
+                if(this.className === "zhang left"){
+                    //this.className = "zhang";//向右侧翻书
+                    if(this.index !== 0 ){
+                        initWidth.call(this,"right");//重置宽度
+                    }else if(this.index === 0){//最后一页和第一页合上书使宽度重置
+                        initPage();
+                    }
+                    for(var k = 0;k<length;k++){
+                        if(k >= this.index){
+                            aZhang[k].className = "zhang";
+                        }
+                    }
+                    zIndex.call(this);//重置z-index
+                }else {
+                    //this.className = "zhang left";//向左侧翻书
+                    if(this.index !== length-1) {
+                        initWidth.call(this,"left");
+                    }else if(this.index === length-1){//最后一页和第一页合上书使宽度重置
+                        initPage();
+                    }
+                    for(k = 0;k<length;k++){
+                        if(k <= this.index){
+                            aZhang[k].className = "zhang left";
+                        }
+                    }
+                    zIndex.call(this);
+                }
+            }
+
+            //翻页时的z-index值
+            function zIndex(  ) {
+                for( var j = 0;j< length;j++){
+                    aZhang[j].style.zIndex = length - Math.abs(j-this.index);
+                }
+            }
+
+            //书的侧边位移归零
+            function initPage() {
+                for(var j = 0;j<length;j++){
+                    aZhang[j].style.width = "100%";
+                }
+            }
+
+            //宽度重置
+            function initWidth(flag) {
+                for(var j = 0;j<length;j++){
+                    if(j<this.index){
+                        aZhang[j].style.width = "" + (100 - x_*j) + "%";
+                    }else if(j>this.index){
+                        aZhang[j].style.width = "" + (100 - (length-(j+1))*x_) + "%";//宽度控制两边距离来控制纸张宽度j+1是j从0开始，加一保证两边都是100%。
+                    }else {
+                        if(flag === "right"){
+                            this.style.width = "" + (100 - (length-(j+1))*x_) + "%";
+                        }else {
+                            this.style.width = "" + (100 - x_*j) + "%";
+                        }
+                    }
+                }
+            }
+        }()
+    })();
+</script>
+</body>
+</html>

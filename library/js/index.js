@@ -213,7 +213,7 @@
             },false);
             aLi[i].onclick = arr[i];
         }
-        var ifClick = true;
+        var ifClick = true;//判断是否点击li
         var time = new Date();
         oUl.onclick = function (e) {
             e.cancelBubble = true;
@@ -253,6 +253,12 @@
         };
         var oAll = document.getElementById("all");
         oDec.onclick = function (e) {
+            this.style.transform = " translateZ(-2000px) rotateY(0deg)";
+            this.style.opacity = "0";
+            setTimeout(function () {
+                this.style.display = "none";
+            },300);
+            ifClick = true;
             e.cancelBubble = true;
             oAll.style.marginLeft = "-100%";
         };
