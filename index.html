@@ -8,179 +8,48 @@
     <meta name="decirption" content="描述信息"><!--字数80字以内标准76字-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        ul li {
-            list-style: none;
-        }
-        body,html{
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            user-select: none;
-            -webkit-touch-callout:none;
-            -webkit-user-select:none;
-            -khtml-user-select:none;
-            -moz-user-select:none;
-            -ms-user-select:none;
-            background: -webkit-radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.3));
-        }
-        #main ul li:nth-child(1){background: url("img/pic1.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(2){background: url("img/pic2.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(3){background: url("img/pic3.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(4){background: url("img/pic4.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(5){background: url("img/pic5.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(6){background: url("img/pic6.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(7){background: url("img/pic7.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(8){background: url("img/pic8.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(9){background: url("img/pic9.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(10){background: url("img/pic10.png")no-repeat 50% 30%/70%}
-        #main ul li:nth-child(11){background: url("img/pic11.png")no-repeat 50% 30%/70%}
-        #main ul{
-            position: relative;
-        }
-        #main ul li{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 70px;
-            height: 90px;
-            border-radius: 5px;
-            opacity: 1;
-            padding: 5px;
-        }
-        #main ul li.select,#main ul li:hover{
-            background-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 3px 0 #ffffff;
-        }
-        #main ul li p{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: bold;
-            width: 100%;
-            height: 20px;
-            text-align: center;
-            line-height: 20px;
-        }
-        /*菜单样式*/
-        #listBody{
-            position: absolute;
-            display: none;
-            border: 1px dashed #fff;
-            background: #ffffff;
-            box-shadow: 2px 2px 5px 0 #000000;
-            padding: 5px;
-        }
-        #listBody ul{
-            width: 100%;
-            height: 100%;
-        }
-        #listBody ul li{
-            width: 100%;
-            height: 30px;
-            line-height: 30px;
-            text-indent: 1em;
-            border-bottom: 1px solid #dddddd;
-        }
-        #listBody ul li:hover{
-            background: #dddddd;
-        }
-        /*详细页，菜单点击之后弹出的页面*/
-        #detail{
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            width: 800px;
-            height: 500px;
-            background: #ffffff;
-        }
-        #detail .header{
-            width: 100%;
-            height: 40px;
-            background: blue;
-        }
-        #detail .header:after{
-            content: "";
-            display: block;
-            clear: both;
-        }
-        #detail .header div#close{
-            float: right;
-            margin: 3px 3px;
-            width: 34px;
-            height: 34px;
-            color: #ffffff;
-            line-height: 34px;
-            text-align: center;
-        }
-        #detail .header div#close:hover{
-            background: #ff2b1c;
-        }
-        #detail .body{
-            position: relative;
-            width: 100%;
-            height: 460px;
-        }
-        #detail .body p{
-            text-align: center;
-            line-height: 50px;
-            font-weight: bold;
-            font-size: 24px;
-        }
-        #detail .body span{
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            cursor: pointer;
-        }
-        #detail .body span:nth-child(2){background: red;}
-        #detail .body span:nth-child(3){background: yellow;}
-        #detail .body span:nth-child(4){background: black;}
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<!--canvas start-->
+<canvas id="canvas" width="100%" height="100%">
+    您的浏览器不支持canvas，请更换浏览器
+</canvas>
+<!--canvas end-->
 <div id="all">
     <div id="main">
         <ul>
-            <li data_src="null">
+            <li data_src="static/null">
                 <p>个人简历</p>
             </li>
-            <li data_src="null">
+            <li data_src="static/null">
                 <p>我的博客</p>
             </li>
-            <li data_src="null">
+            <li data_src="static/null">
                 <p>我的视频</p>
             </li>
-            <li data_src="null">
+            <li data_src="static/QQMusic">
                 <p>我的音乐</p>
             </li>
-            <li data_src="null">
+            <li data_src="static/null">
                 <p>相关人物</p>
             </li>
             <li data_src="https://github.com/Stupid-liar">
                 <p>我的github</p>
             </li>
-            <li data_src="meizu">
+            <li data_src="static/meizu">
                 <p>魅族</p>
             </li>
-            <li data_src="library">
+            <li data_src="static/library">
                 <p>Js特效</p>
             </li>
-            <li data_src="book">
+            <li data_src="static/book">
                 <p>我的书架</p>
             </li>
-            <li data_src="null">
+            <li data_src="static/null">
                 <p>实验室</p>
             </li>
-            <li data_src="jd">
+            <li data_src="static/jd">
                 <p>京东</p>
             </li>
         </ul>
@@ -209,364 +78,10 @@
 </div>
 
 
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-    $(function () {
-        var $li = $("#main").find("ul li"),
-            liW = $li.outerWidth(),
-            liH = $li.outerHeight(),
-            windowH = $(window).height(),
-            windowW = $(window).width(),
-            num = 7,
-            h_ = Math.max((windowH - liH*num)/(num+1),0),
-            num_y = Math.floor(windowW/(h_+liW)),
-            listW = 150,//存放右键菜单的宽高
-            listH = 150,
-            $listBody = $("#listBody"),
-            $detail = $("#detail"),
-            $close = $("#close");
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script>
 
-        $close.click(function () {
-            $detail.hide();
-        });
-        //初始化执行
-        init();
-
-        //解除浏览器默认鼠标右键功能
-
-        $(document).contextmenu(function () {
-        //window.event.returnValue = false;//这一句不加在火狐中不生效
-            return false;
-        });
-        /*
-        谨慎用会有问题
-        $("body,html").bind("contextmenu", function(){
-            return false;
-        });
-        */
-
-        //窗口改变
-        $(window).resize(function () {
-            windowH = $(window).height();
-            windowW = $(window).width();
-            num_y = Math.floor(windowW/(h_+liW));
-            h_ = Math.max((windowH - liH*num)/(num+1),0);
-            $li.each(function (i) {
-                $(this).css({
-                    left: this.x*(liW + h_) + h_/2 + "px",
-                    top: this.y*(liH + h_) + h_/2 + "px"
-                })
-            });
-        });
-
-        //初始化
-        function init() {
-            $li.each(function (i) {
-                this.x = Math.floor(i/num);
-                this.y = i%num;
-                $(this).css({
-                    left: this.x * (liW + h_) + h_/2 + "px",
-                    top: this.y * (liH + h_) + h_/2 + "px"
-                });
-            });
-        }
-
-        //构造原型数组删除指定元素（参考）
-        /*Array.prototype.remove = function(val) {
-            var index = this.indexOf(val);
-            if (index > -1) {
-                this.splice(index, 1);
-            }
-        };*/
-
-
-        //li的拖拽
-        $li.each(function (i) {
-                $(this).mousedown(function (e) {
-                    e.stopPropagation();
-                    if(3 === e.which){
-                        //li右键还没想好
-                    }else {
-                        var This = [];
-                        if($(this).hasClass("select")){
-                            $li.each(function (j) {
-                                if($(this).hasClass("select")){
-                                    This.push(this);
-                                }
-                            })
-                        }else {
-                            $li.each(function () {
-                                $(this).removeClass("select");
-                            });
-                            This[0] = this;
-                        }
-                        this.ifMove = false;
-                        var xS = e.clientX,
-                            yS = e.clientY;//初始位置
-                        var left = [],top = [];//存放选中li的初始left和top
-                        var sX = [],sY = [];//存放选中li的初始宽和高
-                        for(var k = 0;k<This.length; k++){
-                            left[k] = $(This[k]).offset().left;
-                            top[k] = $(This[k]).offset().top;//初始宽高
-
-                            sX[k] = This[k].x;
-                            sY[k] = This[k].y;//点击初始坐标
-                        }
-
-                        $(document).mousemove(function (e) {
-                            //判断是否拖动来控制点击事件
-                            $(This[i]).mousemove(function () {
-                                This[i].ifMove = true;
-                            });
-
-                            var x_ = e.clientX - xS,
-                                y_ = e.clientY - yS;//变化量
-
-                            for(var k = 0;k<This.length; k++){
-                                $(This[k]).css({
-                                    left: left[k] + x_ +"px",
-                                    top: top[k] + y_ + "px"
-                                });
-
-                                //控制四个方向不出界
-                                //This[k].x = Math.max(Math.round((left[k] + x_-h_/2)/(liW + h_)),0);
-                                //This[k].x = Math.min(This[k].x,num_y-1);
-                                //This[k].y = Math.max(Math.round((top[k] + y_-h_/2)/(liH + h_)),0);
-                                //This[k].y = Math.min(This[k].y,num-1);
-                                This[k].x = Math.round((left[k] + x_-h_/2)/(liW + h_));
-                                This[k].y = Math.round((top[k] + y_-h_/2)/(liH + h_));
-                            }
-
-
-                        });
-                        $(document).mouseup(function () {
-                            var sibling = [];
-                            if(This.ifMove) {
-                                //还没想好如何共存问题，这里暂时用双击代替
-                            }
-                            //判断是否于兄弟元素冲突
-                            $li.each(function () {
-                                if(!$(this).hasClass("select")){
-                                    sibling.push(this);
-                                }
-                            });
-                            //只选择一个的问题
-                            if(This.length === 1){
-                                //sibling.remove(This[0]);使用构造原型函数
-                                var index = sibling.indexOf(This[0]);
-                                if (index > -1) {
-                                    sibling.splice(index, 1);
-                                }
-                            }
-                            //全选的问题(特殊情况)
-                            if(sibling.length === 0){
-                                for(var j = 0;j<This.length;j++){
-                                    if(This[j].y<0 || This[j].x<0 || This[j].y >num-1||This[j].x>num_y-1){
-                                        for(k = 0;k<This.length;k++){
-                                            This[k].x = sX[k];
-                                            This[k].y = sY[k];
-                                        }
-                                    }
-                                }
-                            }else {
-                                for(var i = 0;i<sibling.length;i++){
-                                    for(j = 0;j<This.length;j++){
-                                        if(This[j].x === sibling[i].x && This[j].y === sibling[i].y || This[j].y<0 || This[j].x<0 || This[j].y >num-1||This[j].x>num_y-1){
-                                            for(k = 0;k<This.length;k++){
-                                                This[k].x = sX[k];
-                                                This[k].y = sY[k];
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            for(var k = 0;k<This.length; k++) {
-                                $(This[k]).css({
-                                    left: This[k].x * (liW + h_) + h_ / 2 + "px",
-                                    top: This[k].y * (liH + h_) + h_ / 2 + "px"
-                                });
-                            }
-                            $(document).off("mousemove");
-                            $(document).off("mouseup");
-                        })
-                    }
-                })
-            })
-
-        $listBody.click(function (e) {
-            $(this).hide();
-            e.stopPropagation();
-            var target = e.target;
-            var index = $(target).index();
-            switch (index){
-                case 0://刷新
-                    window.location.reload();
-                    break;
-                case 1://查看
-                    break;
-                case 2://个性化
-                    $detail.show();
-                    break;
-                case 3://设置
-                    break;
-                case 4://收藏
-                    break;
-                case 5://新建
-                    break;
-                default:
-                    return;
-            }
-
-        });
-        //双击
-        $li.each(function () {
-            $(this).dblclick(function () {
-                if(/http/.test($(this).attr('data_src'))){
-                    window.open(""+$(this).attr('data_src')+"","_blank");
-                }
-                window.open(""+$(this).attr('data_src')+"/index.html","_blank");
-            })
-        });
-
-        //判断是否出界
-        function initListCss( $list,e) {
-            var xS = e.clientX,
-                yS = e.clientY;
-            $list.css({
-                width: ""+listW+"px",
-                height: ""+listH+"px"
-            });
-            if((xS + listW) < windowW && (yS + listH) < windowH){
-                $list.css({
-                    top: ""+yS+"px",
-                    left: ""+xS+"px"
-                })
-            }else if( (xS + listW) > windowW && (yS + listH) < windowH){
-                $list.css({
-                    top: ""+yS+"px",
-                    left: ""+(xS - listW)+"px"
-                })
-            }else if((xS + listW) > windowW && (yS + listH) > windowH){
-                $list.css({
-                    top: ""+ (yS-listH) +"px",
-                    left: ""+ (xS - listW) +"px"
-                })
-            }else if((xS + listW) < windowW && (yS + listH) > windowH){
-                $list.css({
-                    top: ""+ (yS-listH) +"px",
-                    left: ""+ xS  +"px"
-                })
-            }
-        }
-
-        //click和mousedown也不样使用需要注意事件冒泡问题
-        $(document).click(function (e) {
-            if(e.witch === 3 || 2 === e.button)return
-            $listBody.hide();
-        });
-
-        //选中拖拽和鼠标右键
-        $(document).mousedown(function (e) {
-            var xS = e.clientX,
-                yS = e.clientY,
-                $div;
-            if(3 === e.which || 2 === e.button){//判断鼠标右键
-                $(document).mouseup(function (e) {
-                    initListCss($listBody,e);
-                    $listBody.show();
-                    $(document).off("mouseup");
-                })
-            }else {
-                $li.each(function () {
-                    $(this).removeClass("select");
-                });
-                $div = $("<div id='select'></div>");
-                $('body').append($div);
-                //document.body.appendChild(div);
-                $(document).mousemove(function (e) {
-                    var x_ = e.clientX - xS,
-                        y_ = e.clientY - yS;
-
-                    $div.css({
-                        position: 'absolute',
-                        border: '1px dashed #fff',
-                        width: Math.abs(x_),
-                        height: Math.abs(y_),
-                        background: "rgba(255,255,255,0.1)"
-                    });
-                    //判断选择框的移动方向
-                    if(x_ < 0 && y_<0){
-                        $div.css({
-                            left: xS + x_,
-                            top: yS + y_
-                        });
-                    }else if(x_<0&&y_>0){
-                        $div.css({
-                            left: xS + x_,
-                            top: yS
-                        });
-                    }else if(x_>0&&y_<0){
-                        $div.css({
-                            left: xS,
-                            top: yS + y_
-                        });
-                    }else {
-                        $div.css({
-                            left: xS,
-                            top: yS
-                        });
-                    }
-                    //$li.prop("class","select");
-                    //$li.addClass("select");
-                    $li.each(function () {
-                        if(pz( $(this) , $div)){
-                            $(this).addClass("select");
-                        }else {
-                            $(this).removeClass("select");
-                        }
-                    })
-                });
-            }
-            $(document).mouseup(function () {
-                $(document).off("mousemove");
-                $(document).off("mouseup");
-                $div && $div.remove();
-            })
-        });
-
-        //碰撞检测
-        function pz( $obj1, $obj2 ) {
-            var oL1 = $obj1.offset().left,
-                oT1 = $obj1.offset().top,
-                oR1 = $obj1.offset().left + $obj1.outerWidth(),
-                oB1 = $obj1.offset().top + $obj1.outerHeight();
-
-            var oL2 = $obj2.offset().left,
-                oT2 = $obj2.offset().top,
-                oR2 = $obj2.offset().left + $obj2.outerWidth(),
-                oB2 = $obj2.offset().top + $obj2.outerHeight();
-            if(oL1>oR2 || oT1>oB2 || oR1<oL2 || oB1<oT2) {
-                return false;
-            }else {
-                return true;
-            }
-        }
-
-        //更换背景颜色
-
-        $detail.find(".body span").click(function () {
-            var index = $(this).index();
-            console.log(index);
-            changeColor(index);
-        });
-        function changeColor(index) {
-            var colorJson = ["red","yellow","black"];
-            $("body,html").css({
-                background: ""+colorJson[index-1]+""
-            })
-        }
-    })
 </script>
 </body>
 </html>
