@@ -2,208 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c1be2c-2882-438b-bd98-dcbdbad22c61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/meizu/iconfont/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/meizu/iconfont/iconfont.woff" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/book/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/book/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/book/.idea/书.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/book/img/face.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/book/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/.idea/移动端实战-京东.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/css/swiper-3.4.2.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/banner/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/banner/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/banner/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/banner/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/footer/jd-sprites.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/header/jd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/header/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/nav/nav1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/nav/nav2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/nav/nav3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/nav/nav4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/nav/nav5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part1/picture1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shop8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shopping.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part2/shoppinr_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/banner1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/banner2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/banner3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/banner4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/selectiv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/shop1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/shop2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/shop3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/part3/shop4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/img/swiper2/9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jd/js/swiper-3.4.2.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/.idea/modules.xml" afterPath="$PROJECT_DIR$/static/library/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/.idea/vcs.xml" afterPath="$PROJECT_DIR$/static/library/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/.idea/workspace.xml" afterPath="$PROJECT_DIR$/static/library/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/.idea/案例库.iml" afterPath="$PROJECT_DIR$/static/library/.idea/案例库.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/css/index.css" afterPath="$PROJECT_DIR$/static/library/css/index.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/img/bg.png" afterPath="$PROJECT_DIR$/static/library/img/bg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/index.html" afterPath="$PROJECT_DIR$/static/library/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/js/dongData.js" afterPath="$PROJECT_DIR$/static/library/js/dongData.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/js/index.js" afterPath="$PROJECT_DIR$/static/library/js/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/5.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/6.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/7.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/8.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/9.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/9.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/header.png" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/header.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/step.png" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/step.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/img/top.png" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/img/top.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/index.html" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/Baidu optical axis/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/Baidu optical axis/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/baidu/images/1.png" afterPath="$PROJECT_DIR$/static/library/src/baidu/images/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/baidu/index.html" afterPath="$PROJECT_DIR$/static/library/src/baidu/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/baidu/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/baidu/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/replace/index.html" afterPath="$PROJECT_DIR$/static/library/src/replace/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/replace/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/replace/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/5.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/6.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/7.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/img/8.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/img/8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/index.html" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/京东轮播图/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/京东轮播图/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/img/5.jpg" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/img/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/index.html" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/全屏滚动/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/全屏滚动/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/img/5.jpg" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/img/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/img/new-bg.png" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/img/new-bg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/index.html" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/图片遮罩层进入（四个方向进入判断）/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/图片遮罩层进入（四个方向进入判断）/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/手风琴/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/手风琴/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/手风琴/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/手风琴/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/img/bg.jpg" afterPath="$PROJECT_DIR$/static/library/src/手风琴/img/bg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/index.html" afterPath="$PROJECT_DIR$/static/library/src/手风琴/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/手风琴/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/手风琴/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/拖拽时事件。（event）/demo.html" afterPath="$PROJECT_DIR$/static/library/src/拖拽时事件。（event）/demo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/拖拽时事件。（event）/index.html" afterPath="$PROJECT_DIR$/static/library/src/拖拽时事件。（event）/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/拖拽时事件。（event）/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/拖拽时事件。（event）/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/放大镜/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/放大镜/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/放大镜/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/放大镜/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/img/5.jpg" afterPath="$PROJECT_DIR$/static/library/src/放大镜/img/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/img/cover.png" afterPath="$PROJECT_DIR$/static/library/src/放大镜/img/cover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/index.html" afterPath="$PROJECT_DIR$/static/library/src/放大镜/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/放大镜/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/放大镜/prefect.html" afterPath="$PROJECT_DIR$/static/library/src/放大镜/prefect.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/.idea/misc.xml" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/.idea/modules.xml" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/.idea/workspace.xml" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/.idea/时间图片刷新（时间的运用）.iml" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/.idea/时间图片刷新（时间的运用）.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/0.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/1.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/2.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/3.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/4.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/5.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/6.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/7.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/8.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/9.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/img/d.png" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/img/d.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/index.html" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/时间图片刷新/index1.html" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/index1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/img/1.jpg" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/img/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/img/2.jpg" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/img/3.jpg" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/img/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/img/4.jpg" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/img/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/img/5.jpg" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/img/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/index.html" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/滑动轮播效果（定时器的运用）/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/滑动轮播效果（定时器的运用）/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/省市联动三级（json用法）/areaData.js" afterPath="$PROJECT_DIR$/static/library/src/省市联动三级（json用法）/areaData.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/省市联动三级（json用法）/index.html" afterPath="$PROJECT_DIR$/static/library/src/省市联动三级（json用法）/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/library/src/省市联动三级（json用法）/index.jpg" afterPath="$PROJECT_DIR$/static/library/src/省市联动三级（json用法）/index.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/css/base.css" afterPath="$PROJECT_DIR$/static/meizu/css/base.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/css/index.css" afterPath="$PROJECT_DIR$/static/meizu/css/index.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/css/swiper-3.4.2.min.css" afterPath="$PROJECT_DIR$/static/meizu/css/swiper-3.4.2.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/demo.css" afterPath="$PROJECT_DIR$/static/meizu/iconfont/demo.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/demo_fontclass.html" afterPath="$PROJECT_DIR$/static/meizu/iconfont/demo_fontclass.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/demo_symbol.html" afterPath="$PROJECT_DIR$/static/meizu/iconfont/demo_symbol.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/demo_unicode.html" afterPath="$PROJECT_DIR$/static/meizu/iconfont/demo_unicode.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/iconfont.css" afterPath="$PROJECT_DIR$/static/meizu/iconfont/iconfont.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/iconfont.eot" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/iconfont.js" afterPath="$PROJECT_DIR$/static/meizu/iconfont/iconfont.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/iconfont.svg" afterPath="$PROJECT_DIR$/static/meizu/iconfont/iconfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/iconfont.ttf" afterPath="$PROJECT_DIR$/static/library/src/时间图片刷新/.idea/misc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/iconfont/iconfont.woff" afterPath="$PROJECT_DIR$/static/meizu/iconfont/iconfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/banner/1.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/banner/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/banner/2.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/banner/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/banner/3.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/banner/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/banner/4.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/banner/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/banner/5.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/banner/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/header/mx6_23e5fc6.png" afterPath="$PROJECT_DIR$/static/meizu/img/header/mx6_23e5fc6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/header/pro6@2x_107c6a5.png" afterPath="$PROJECT_DIR$/static/meizu/img/header/pro6@2x_107c6a5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/header/pro6plus_e6bf23a.png" afterPath="$PROJECT_DIR$/static/meizu/img/header/pro6plus_e6bf23a.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/header/pro6s@2x_5ad0c47.png" afterPath="$PROJECT_DIR$/static/meizu/img/header/pro6s@2x_5ad0c47.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/header/pro7@2x_73ddec1.png" afterPath="$PROJECT_DIR$/static/meizu/img/header/pro7@2x_73ddec1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/logo/icon-user_90e5951.png" afterPath="$PROJECT_DIR$/static/meizu/img/logo/icon-user_90e5951.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/logo/logo-new-toggle_294da7f.png" afterPath="$PROJECT_DIR$/static/meizu/img/logo/logo-new-toggle_294da7f.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/logo/shopping-cart-white_43eec95.png" afterPath="$PROJECT_DIR$/static/meizu/img/logo/shopping-cart-white_43eec95.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part1/Cgbj0VlvPAqAGfPdAAAzEPVBj4g535.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part1/Cgbj0VlvPAqAGfPdAAAzEPVBj4g535.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part2/Cgbj0FlHkBaATplhAAEuzpdqeEI696.png" afterPath="$PROJECT_DIR$/static/meizu/img/part2/Cgbj0FlHkBaATplhAAEuzpdqeEI696.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part3/Cgbj0FmSnReAY-bbAAFtnpUUzG4058.png" afterPath="$PROJECT_DIR$/static/meizu/img/part3/Cgbj0FmSnReAY-bbAAFtnpUUzG4058.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part3/Cgbj0FmSnRiAG8B_AAGt2EgtluQ342.png" afterPath="$PROJECT_DIR$/static/meizu/img/part3/Cgbj0FmSnRiAG8B_AAGt2EgtluQ342.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part5/Cgbj0VlZqvaAGb0QAAUD7V55-H8213.png@240x240.png" afterPath="$PROJECT_DIR$/static/meizu/img/part5/Cgbj0VlZqvaAGb0QAAUD7V55-H8213.png@240x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part5/Cgbj0VmcCQuAZvVPAAIY1OL6Z64975.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part5/Cgbj0VmcCQuAZvVPAAIY1OL6Z64975.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part6/Cgbj0FmCnkeAa1ITAAByIZEh5gw983.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part6/Cgbj0FmCnkeAa1ITAAByIZEh5gw983.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part6/Cgbj0VmCnkeAQ2ZJAABGcl0OE7U094.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part6/Cgbj0VmCnkeAQ2ZJAABGcl0OE7U094.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part6/Cgbj0VmCnkeAbTZdAABXn5Kib_A226.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part6/Cgbj0VmCnkeAbTZdAABXn5Kib_A226.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part8/Cgbj0VmJca6AEj1VAAFhmdKA9-k843.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part8/Cgbj0VmJca6AEj1VAAFhmdKA9-k843.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part8/w100h100.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part8/w100h100.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part9/download.png" afterPath="$PROJECT_DIR$/static/meizu/img/part9/download.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/img/part9/wx-code_94c130c.jpg" afterPath="$PROJECT_DIR$/static/meizu/img/part9/wx-code_94c130c.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/index.html" afterPath="$PROJECT_DIR$/static/meizu/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meizu/js/swiper-3.4.2.min.js" afterPath="$PROJECT_DIR$/static/meizu/js/swiper-3.4.2.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/null/index.html" afterPath="$PROJECT_DIR$/static/null/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -216,37 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
-              <folding>
-                <element signature="e#18#3120#0" expanded="false" />
-                <element signature="e#3987#4362#0" expanded="false" />
-                <element signature="e#4900#9476#0" expanded="false" />
-                <element signature="e#9512#10079#0" expanded="false" />
-                <element signature="e#10441#11346#0" expanded="false" />
-                <element signature="e#11420#11503#0" expanded="false" />
-                <element signature="e#11562#13765#0" expanded="false" />
-                <element signature="e#13812#14346#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -277,8 +48,8 @@
         <option value="$PROJECT_DIR$/special.html" />
         <option value="$PROJECT_DIR$/library/js/index.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
       </list>
     </option>
   </component>
@@ -288,7 +59,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="302" />
     <option name="y" value="123" />
     <option name="width" value="1414" />
@@ -310,7 +81,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,21 +88,17 @@
               <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
               <item name="desktop" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-practice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -375,24 +141,25 @@
       <workItem from="1512365777163" duration="23855000" />
       <workItem from="1512819864765" duration="3993000" />
       <workItem from="1513257979357" duration="14000" />
+      <workItem from="1514281245548" duration="682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59483000" />
+    <option name="totallyTimeSpent" value="60165000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="302" y="123" width="1414" height="921" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14680232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10642782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -425,17 +192,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+          <folding>
+            <element signature="e#4002#4377#0" expanded="false" />
+            <element signature="e#4915#9491#0" expanded="false" />
+            <element signature="e#9527#10094#0" expanded="false" />
+            <element signature="e#10456#11361#0" expanded="false" />
+            <element signature="e#11435#11518#0" expanded="false" />
+            <element signature="e#11577#13780#0" expanded="false" />
+            <element signature="e#13827#14361#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13110">
           <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
           <folding>
-            <element signature="e#18#3120#0" expanded="false" />
-            <element signature="e#3987#4362#0" expanded="false" />
-            <element signature="e#4900#9476#0" expanded="false" />
-            <element signature="e#9512#10079#0" expanded="false" />
-            <element signature="e#10441#11346#0" expanded="false" />
-            <element signature="e#11420#11503#0" expanded="false" />
-            <element signature="e#11562#13765#0" expanded="false" />
-            <element signature="e#13812#14346#0" expanded="false" />
+            <element signature="e#4002#4377#0" expanded="false" />
+            <element signature="e#4915#9491#0" expanded="false" />
+            <element signature="e#9527#10094#0" expanded="false" />
+            <element signature="e#10456#11361#0" expanded="false" />
+            <element signature="e#11435#11518#0" expanded="false" />
+            <element signature="e#11577#13780#0" expanded="false" />
+            <element signature="e#13827#14361#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -562,13 +352,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/special.html" />
-    <entry file="file://$PROJECT_DIR$/static/library/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4200">
-          <caret line="253" column="16" lean-forward="false" selection-start-line="253" selection-start-column="12" selection-end-line="253" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jd/js/index.js" />
     <entry file="file://$PROJECT_DIR$/jd/css/index.css" />
     <entry file="file://$PROJECT_DIR$/jd/index.html" />
@@ -579,27 +362,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/QQMusic/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1514017886856" expanded="true" signature="3365:3464" ph="..." />
+            <marker date="1514017886856" expanded="true" signature="11319:11418" ph="..." />
+            <marker date="1514017886856" expanded="true" signature="11536:11635" ph="..." />
+            <marker date="1514017886856" expanded="true" signature="12390:12489" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/library/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="253" column="16" lean-forward="false" selection-start-line="253" selection-start-column="12" selection-end-line="253" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+        <state relative-caret-position="960">
+          <caret line="113" column="6" lean-forward="false" selection-start-line="113" selection-start-column="6" selection-end-line="113" selection-end-column="6" />
           <folding>
-            <element signature="e#18#3120#0" expanded="false" />
-            <element signature="e#3987#4362#0" expanded="false" />
-            <element signature="e#4900#9476#0" expanded="false" />
-            <element signature="e#9512#10079#0" expanded="false" />
-            <element signature="e#10441#11346#0" expanded="false" />
-            <element signature="e#11420#11503#0" expanded="false" />
-            <element signature="e#11562#13765#0" expanded="false" />
-            <element signature="e#13812#14346#0" expanded="false" />
+            <element signature="e#4002#4377#0" expanded="false" />
+            <element signature="e#4915#9491#0" expanded="false" />
+            <element signature="e#9527#10094#0" expanded="false" />
+            <element signature="e#10456#11361#0" expanded="false" />
+            <element signature="e#11435#11518#0" expanded="false" />
+            <element signature="e#11577#13780#0" expanded="false" />
+            <element signature="e#13827#14361#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state relative-caret-position="570">
+          <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
           <folding />
         </state>
       </provider>

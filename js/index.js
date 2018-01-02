@@ -1,4 +1,4 @@
-//js
+//js 背景部分（canvas）
 (function () {
     var w = window.innerWidth,
         h = window.innerHeight,
@@ -111,7 +111,7 @@
     }//画流星
 })();
 
-//jq
+//jq内容
 $(function () {
     var $li = $("#main").find("ul li"),
         liW = $li.outerWidth(),

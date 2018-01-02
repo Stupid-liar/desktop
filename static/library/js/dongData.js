@@ -1,3 +1,4 @@
+//con保存为缩略图路径！！！
 var dongData = [
     {
         type : "js",
@@ -78,5 +79,29 @@ var dongData = [
         time : "17/11/29",
         dec : "时间动画版，行走时钟",
         con : "时间图片刷新"
+    },
+    {
+        type : "css",
+        title : "多边形导航",
+        author : "东东",
+        time : "18/1/1",
+        dec : "使用css3特性布局一个导航",
+        con : "多边形导航"
+    },
+    {
+        type : "js",
+        title : "滑动轮播",
+        author : "东东",
+        time : "17/11/29",
+        dec : "轮播图",
+        con : "滑动轮播效果（定时器的运用）"
+    },
+    {
+        type : "js",
+        title : "三级省市联动",
+        author : "东东",
+        time : "17/11/29",
+        dec : "省市联动三级导航栏",
+        con : "省市联动三级（json用法）"
     }
 ];
